@@ -67,7 +67,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`${textFont.className} flex w-full items-center justify-center bg-customLightGreen px-4`}
+      className={`${textFont.className} flex w-full items-center justify-center bg-customLightGreen px-4 z-10`}
     >
       <ul className="hidden h-[75px] items-end md:flex">
         <li className="nav-links link-underline cursor-pointer pb-3 font-bold text-customDarkGreen duration-200 hover:scale-105 hover:text-customWhite md:mx-[25px] lg:mx-[40px]">
@@ -87,7 +87,7 @@ const Navbar = () => {
             height={175}
             width={175}
             alt="JPEL farms"
-            className="rounded-full"
+            className="rounded-full z-20"
           />
         </div>
         <li
