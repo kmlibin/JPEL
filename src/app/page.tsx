@@ -40,38 +40,113 @@ export default function Home() {
         </div>
       </div>
 
-      <div className=" bg-customWhite relative mx-auto flex w-4/5 items-center justify-center pb-[2rem]">
+      {/* who we are section */}
+
+      <div className="relative mx-auto flex w-full items-center justify-center bg-customWhite">
         <h2
-          className={`${titleFont.className} absolute left-[5%] top-[-1rem] -translate-x-1/2 transform bg-customDarkGreen p-4 text-5xl text-customWhite`}
+          className={`${titleFont.className} absolute left-[2%] top-[-1rem] ml-[11.75rem] -translate-x-1/2 transform bg-customDarkGreen p-12 text-5xl text-customWhite`}
         >
           Who We Are
         </h2>
-        <div className="flex justify-center items-center mt-32  bg-customLightGreen rounded p-8">
-        <div className="w-1/3 rounded-[50%]">
-          <Image
-            src={cottage}
-            height={300}
-            width={300}
-            alt="our ranch"
-            className="rounded-[50%]"
-          />
+        <div className="my-44 flex w-4/5 items-center justify-center  rounded bg-customLightGreen p-8">
+          <div className="flex w-1/3 justify-start rounded-[50%]">
+            <Image
+              src={cottage}
+              height={300}
+              width={300}
+              alt="our ranch"
+              className="rounded-[50%]"
+            />
+          </div>
+          <div className="flex w-3/5 flex-col items-end text-right">
+            <p className="p-4">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit
+              amet, consectetur adipiscing elit, sed do eiusmod tempor
+              incididunt ut labore et dolore magna aliqua.
+            </p>
+            <Link
+              className={`${titleFont.className} mt-4 rounded bg-customBeige p-4`}
+              href={paths.farmBeefPath()}
+            >
+              Read More
+            </Link>
+          </div>
         </div>
-        <div className="w-3/5 flex flex-col items-end text-right">
-          <p className="p-4">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet,
-            consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-            labore et dolore magna aliqua.
-          </p>
-          <Link
-            className={`${textFont.className} rounded bg-customBeige p-4 mt-4`}
-            href={paths.farmBeefPath()}
-          >
-            Read More
-          </Link>
+      </div>
+
+      {/* fun facts section */}
+      <div className=" relative mx-auto flex w-full items-center justify-center bg-customBrown">
+        <h2
+          className={`${titleFont.className} absolute right-[2%] top-[-1rem] bg-customDarkGreen p-12 text-5xl text-customWhite`}
+        >
+          Interesting Facts
+        </h2>
+
+        <div className="my-44 flex w-4/5 items-center justify-center rounded bg-customLightGreen p-8">
+          <div className="flex w-3/5 flex-col items-start text-left">
+            <p className="p-4">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit
+              amet, consectetur adipiscing elit, sed do eiusmod tempor
+              incididunt ut labore et dolore magna aliqua.
+            </p>
+            <Link
+              className={`${titleFont.className} mt-4 rounded bg-customBeige p-4`}
+              href={paths.farmBeefPath()}
+            >
+              Read More
+            </Link>
+          </div>
+          <div className="flex w-1/3 justify-end rounded-[50%]">
+            <Image
+              src={cottage}
+              height={300}
+              width={300}
+              alt="our ranch"
+              className="rounded-[50%]"
+            />
+          </div>
         </div>
+      </div>
+
+      {/* location section */}
+      <div className="relative mx-auto flex w-full items-center justify-center bg-customWhite">
+        <h2
+          className={`${titleFont.className} absolute left-[2%] top-[-1rem] ml-[11.75rem] -translate-x-1/2 transform bg-customDarkGreen p-12 text-5xl text-customWhite`}
+        >
+         Our Location
+        </h2>
+        <div className="my-44 flex w-4/5 items-center justify-center  rounded bg-customLightGreen p-8">
+          <div className="flex w-1/3 justify-start rounded-[50%]">
+            <Image
+              src={cottage}
+              height={300}
+              width={300}
+              alt="our ranch"
+              className="rounded-[50%]"
+            />
+          </div>
+          <div className="flex w-3/5 flex-col items-end text-right">
+            <p className="p-4">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit
+              amet, consectetur adipiscing elit, sed do eiusmod tempor
+              incididunt ut labore et dolore magna aliqua.
+            </p>
+            <Link
+              className={`${titleFont.className} mt-4 rounded bg-customBeige p-4`}
+              href={paths.farmBeefPath()}
+            >
+              Read More
+            </Link>
+          </div>
         </div>
       </div>
     </main>
