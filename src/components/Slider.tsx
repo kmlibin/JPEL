@@ -60,8 +60,8 @@ export default function Slider() {
   };
 
   return (
-    <div className="absolute left-[7%] top-1/2 w-1/3 -translate-y-1/2 transform rounded bg-customDarkGreen bg-opacity-80 p-5">
-      <div className=" relative flex w-full flex-col items-end  bg-customBrown p-2 text-left ">
+    <div className="shadow-element absolute left-[7%] top-1/2 w-1/3 -translate-y-1/2 transform rounded bg-customDarkGreen bg-opacity-80 p-5">
+      <div className="shadow-element relative flex w-full flex-col items-end  bg-customBrown p-2 text-left ">
         <h3
           className={`${titleFont.className} w-full bg-customBeige bg-opacity-50 py-2 pl-5 text-left text-4xl`}
         >
@@ -74,11 +74,6 @@ export default function Slider() {
               className="fact-slider flex min-w-full flex-col items-center rounded p-5 text-2xl"
               style={{ translate: `${-100 * factIndex}%` }}
             >
-              {/* <h3
-                className={`${titleFont.className} mb-3 w-full text-left text-4xl`}
-              >
-                Did You Know...
-              </h3> */}
               <p key={fact} className={`${textFont.className} `}>
                 {fact}
               </p>
@@ -97,13 +92,13 @@ export default function Slider() {
         onClick={showPreviousFact}
         className="absolute bottom-0 left-[-11%] top-0 cursor-pointer rounded text-5xl duration-200 hover:bg-customDarkGreen hover:bg-opacity-90 "
       >
-        <IoIosArrowDropleft className=" fill-customBeige bg-customDarkGreen bg-opacity-90 rounded-[50%] mx-2 hover:scale-110 duration-200"  />
+        <IoIosArrowDropleft className="shadow-element mx-2 rounded-[50%] bg-customDarkGreen bg-opacity-90 fill-customBeige duration-200 hover:scale-110" />
       </button>
       <button
         onClick={showNextFact}
         className="absolute bottom-0 right-[-11%] top-0 cursor-pointer rounded py-5 text-5xl duration-200 hover:bg-customDarkGreen hover:bg-opacity-90"
       >
-        <IoIosArrowDropright className=" fill-customBeige bg-customDarkGreen bg-opacity-90 rounded-[50%] mx-2 hover:scale-110 duration-200"  />
+        <IoIosArrowDropright className="shadow-element mx-2 rounded-[50%] bg-customDarkGreen bg-opacity-90 fill-customBeige duration-200 hover:scale-110" />
       </button>
     </div>
   );
