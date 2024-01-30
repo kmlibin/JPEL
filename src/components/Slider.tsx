@@ -71,12 +71,11 @@ export default function Slider() {
         <div className=" flex w-full flex-shrink flex-grow overflow-hidden bg-customBeige bg-opacity-50">
           {facts.map((fact) => (
             <div
+              key={fact}
               className="fact-slider flex min-w-full flex-col items-center rounded p-5 text-2xl"
               style={{ translate: `${-100 * factIndex}%` }}
             >
-              <p key={fact} className={`${textFont.className} `}>
-                {fact}
-              </p>
+              <p className={`${textFont.className} `}>{fact}</p>
             </div>
           ))}
         </div>
@@ -85,7 +84,7 @@ export default function Slider() {
           className={`${titleFont.className} mt-2 flex items-center rounded bg-customBeige p-4`}
           href={paths.farmBeefPath()}
         >
-          Read More <FaArrowAltCircleRight className="ml-2" />
+          Read More <FaArrowAltCircleRight className="ml-2 tracking-wider" />
         </Link>
       </div>
       <button
