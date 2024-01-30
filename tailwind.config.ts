@@ -14,6 +14,7 @@ const config: Config = {
         customLightGreen: "#B5CCAA",
         customBeige: "#D9C2AD",
         customBrown: "#A67E6F",
+        customMediumGreen:"#475E41"
       },
     },
   },
