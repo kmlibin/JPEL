@@ -63,7 +63,7 @@ export default function Slider() {
     <div className="shadow-element absolute left-[7%] top-1/2 w-1/3 -translate-y-1/2 transform rounded bg-customDarkGreen bg-opacity-80 p-5">
       <div className="shadow-element relative flex w-full flex-col items-end  bg-customBrown p-2 text-left ">
         <h3
-          className={`${titleFont.className} w-full bg-customBeige bg-opacity-50 py-2 pl-5 text-left text-4xl`}
+          className={`${titleFont.className} w-full bg-customBeige bg-opacity-70 py-2 pl-5 text-left text-4xl`}
         >
           Did You Know...
         </h3>
@@ -81,7 +81,7 @@ export default function Slider() {
         </div>
 
         <Link
-          className={`${titleFont.className} mt-2 flex items-center rounded bg-customBeige p-4`}
+          className={`${titleFont.className} shadow-sm mt-2 flex items-center rounded bg-customBeige hover:bg-customMediumGreen hover:text-customWhite active:scale-90 duration:200 p-4`}
           href={paths.farmBeefPath()}
         >
           Read More <FaArrowAltCircleRight className="ml-2 tracking-wider" />
