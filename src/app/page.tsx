@@ -87,7 +87,7 @@ export default function Home() {
 
         <div className="my-44 flex w-4/5 items-center justify-center rounded bg-customLightGreen p-8">
           <div className="flex w-3/5 flex-col items-start text-left">
-            <p className={`${textFont.className} p-4 text-2xl`}>
+            <p className={`${textFont.className} text-2xl`}>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               enim ad minim veniam, quis nostrud exercitation ullamco laboris
