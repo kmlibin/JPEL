@@ -10,7 +10,7 @@ import paths from "./paths";
 import Slider from "@/components/Slider";
 import { FaArrowAltCircleRight } from "react-icons/fa";
 
-import { LiaHatCowboySideSolid } from "react-icons/lia";
+// import { LiaHatCowboySideSolid } from "react-icons/lia";
 
 export default function Home() {
   return (
@@ -27,7 +27,7 @@ export default function Home() {
           <div className="absolute inset-0 bg-slate-800 bg-opacity-30"></div>
         </div>
 
-        <div className="absolute bottom-[18%] right-[5%] text-center">
+        <div className="absolute bottom-[18%] right-[5%] text-center flex flex-col items-center">
           <h1 className={`${titleFont.className} text-6xl text-customWhite`}>
             Quality Mountain-Raised Beef
           </h1>
@@ -37,10 +37,10 @@ export default function Home() {
             Naturally Organic, Uniquely Flavorful
           </h3>
           <Link
-            className={`${textFont.className} rounded bg-customBeige p-4`}
+            className={`${textFont.className} flex items-center shadow-element-grey rounded bg-customBeige p-4 underline duration-200 hover:bg-customDarkGreen hover:text-customWhite active:scale-90`}
             href={paths.farmBeefPath()}
           >
-            Learn More
+            <p className="font-bold tracking-wider">Read More</p> <FaArrowAltCircleRight className="ml-2" />
           </Link>
         </div>
       </div>
@@ -61,7 +61,7 @@ export default function Home() {
                 height={350}
                 width={350}
                 alt="our ranch"
-                className="shadow-element rounded-[50%] border border-customDarkGreen"
+                className="shadow-element rounded-[50%] border border-gray-400"
               />
             </div>
             <div className="flex w-3/5 flex-col items-end text-right">
@@ -72,10 +72,11 @@ export default function Home() {
                 nisi ut aliquip ex ea commodo consequat.
               </p>
               <Link
-                className={`${titleFont.className} mt-4 flex items-center rounded bg-customBeige p-4`}
-                href={paths.farmBeefPath()}
+                className={`${titleFont.className} shadow-element-grey mt-4 flex items-center rounded bg-customDarkGreen p-4 tracking-wider
+                 text-customWhite underline`}
+                href={paths.aboutPath()}
               >
-                Read More <FaArrowAltCircleRight className="ml-2" />
+                Learn More <FaArrowAltCircleRight className="ml-2" />
               </Link>
             </div>
           </div>
@@ -95,7 +96,7 @@ export default function Home() {
           <div className="flex h-full justify-end rounded-[50%] lg:w-[85%]">
             <Image
               src={shanerounce}
-              className="h-[100%]"
+              className="h-[100%] "
               style={{ objectFit: "cover" }}
               alt="our ranch"
             />
@@ -118,7 +119,7 @@ export default function Home() {
                 height={350}
                 width={350}
                 alt="our ranch"
-                className="shadow-element rounded-[50%] border border-customDarkGreen"
+                className="shadow-element rounded-[50%] border border-gray-400"
               />
             </div>
             <div className="flex w-3/5 flex-col items-end text-right">
@@ -131,8 +132,8 @@ export default function Home() {
                 incididunt ut labore et dolore magna aliqua.
               </p>
               <Link
-                className={`${titleFont.className} mt-4 flex items-center rounded bg-customDarkGreen p-4 text-customWhite
-                 duration-200 hover:bg-customBrown active:scale-90`}
+                className={`${titleFont.className} shadow-element-grey mt-4 flex items-center rounded bg-customDarkGreen p-4 tracking-wider
+                 text-customWhite underline duration-200 hover:bg-customBrown active:scale-90`}
                 href={paths.farmBeefPath()}
               >
                 Learn More <FaArrowAltCircleRight className="ml-2" />
