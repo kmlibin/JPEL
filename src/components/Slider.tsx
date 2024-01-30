@@ -9,6 +9,7 @@ import { textFont, titleFont } from "../app/utils/fonts";
 
 import { FaCow } from "react-icons/fa6";
 import { LiaHatCowboySideSolid } from "react-icons/lia";
+import { IoIosArrowDropright, IoIosArrowDropleft } from "react-icons/io";
 
 const facts = [
   `Highland cattle exhibit a hierarchical social structure based on age and gender. Older individuals hold dominance over 
@@ -62,7 +63,7 @@ export default function Slider() {
     <div className="absolute left-[7%] top-1/2 w-1/3 -translate-y-1/2 transform rounded bg-customDarkGreen bg-opacity-80 p-5">
       <div className=" relative flex w-full flex-col items-end  bg-customBrown p-2 text-left ">
         <h3
-          className={`${titleFont.className} w-full bg-customBeige bg-opacity-50 py-2 text-left pl-5 text-4xl`}
+          className={`${titleFont.className} w-full bg-customBeige bg-opacity-50 py-2 pl-5 text-left text-4xl`}
         >
           Did You Know...
         </h3>
@@ -94,15 +95,15 @@ export default function Slider() {
       </div>
       <button
         onClick={showPreviousFact}
-        className="absolute bottom-0 left-[-15%] top-0 cursor-pointer text-7xl duration-200 hover:bg-customDarkGreen hover:bg-opacity-90 "
+        className="absolute bottom-0 left-[-11%] top-0 cursor-pointer rounded text-5xl duration-200 hover:bg-customDarkGreen hover:bg-opacity-90 "
       >
-        <MdArrowLeft />
+        <IoIosArrowDropleft className=" fill-customBeige bg-customDarkGreen bg-opacity-90 rounded-[50%] mx-2 hover:scale-110 duration-200"  />
       </button>
       <button
         onClick={showNextFact}
-        className="absolute bottom-0 right-[-15%] top-0 cursor-pointer py-5 text-7xl duration-200 hover:bg-customDarkGreen hover:bg-opacity-90"
+        className="absolute bottom-0 right-[-11%] top-0 cursor-pointer rounded py-5 text-5xl duration-200 hover:bg-customDarkGreen hover:bg-opacity-90"
       >
-        <MdArrowRight />
+        <IoIosArrowDropright className=" fill-customBeige bg-customDarkGreen bg-opacity-90 rounded-[50%] mx-2 hover:scale-110 duration-200"  />
       </button>
     </div>
   );
