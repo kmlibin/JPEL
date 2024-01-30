@@ -64,10 +64,13 @@ export default function Home() {
             </div>
             <div className="flex w-3/5 flex-col items-end text-right">
               <p className={`${textFont.className} p-4 text-3xl`}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat.
+                Discover JPEL Farms, a family-run farm nestled in the scenic
+                landscapes of Colorado. Our passion lies in the meticulous care
+                and breeding of Scottish Highland Cattle, renowned for both
+                showmanship and delectable meat. At JPEL Farms, our commitment
+                to quality and tradition defines us. Join us on a journey that
+                goes beyond the ordinary – where every bite tells a story of
+                dedication and excellence.
               </p>
               <Link
                 className={`${titleFont.className} shadow-element-grey mt-4 flex items-center rounded bg-customDarkGreen p-4 tracking-wider
@@ -122,16 +125,19 @@ export default function Home() {
             </div>
             <div className="flex w-3/5 flex-col items-end text-right">
               <p className={`${textFont.className} text-3xl`}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit
-                amet, consectetur adipiscing elit, sed do eiusmod tempor
-                incididunt ut labore et dolore magna aliqua.
+                Discover the exceptional qualities of Highland Beef – a{" "}
+                <span className="font-bold">natural </span>
+                and <span className="font-bold">nutritious</span> choice. With
+                lower fat and cholesterol, higher levels of omega-3 and CLA, and
+                rich with vitamins and minerals, Highland beef promotes heart health and
+                overall well-being. Slow-matured, lean, and packed with
+                essential nutrients, Highland Beef offers unparalleled flavor,
+                tenderness, and juiciness. JPEL Farms proudly offers
+                USDA-certified cuts.
               </p>
               <Link
-                className={`${titleFont.className} hover:scale-105 shadow-element-grey mt-4 flex items-center rounded bg-customDarkGreen p-4 tracking-wider
-                 text-customWhite underline duration-200 hover:bg-customMediumGreen active:scale-90`}
+                className={`${titleFont.className} shadow-element-grey mt-4 flex items-center rounded bg-customDarkGreen p-4 tracking-wider text-customWhite
+                 underline duration-200 hover:scale-105 hover:bg-customMediumGreen active:scale-90`}
                 href={paths.farmBeefPath()}
               >
                 Learn More <FaArrowAltCircleRight className="ml-2" />
