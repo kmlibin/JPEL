@@ -3,11 +3,12 @@ import { useState } from "react";
 import Link from "next/link";
 import paths from "@/app/paths";
 import { MdArrowLeft, MdArrowRight } from "react-icons/md";
+import { FaArrowAltCircleRight } from "react-icons/fa";
 
 import { textFont, titleFont } from "../app/utils/fonts";
-import { errorToJSON } from "next/dist/server/render";
-import { unstable_noStore } from "next/cache";
-import { block } from "sharp";
+
+import { FaCow } from "react-icons/fa6";
+import { LiaHatCowboySideSolid } from "react-icons/lia";
 
 const facts = [
   `Highland cattle exhibit a hierarchical social structure based on age and gender. Older individuals hold dominance over 
@@ -49,35 +50,46 @@ export default function Slider() {
     });
   };
 
-  const showNextFact = () => { 
-    console.log(window.innerWidth)
+  const showNextFact = () => {
+    console.log(window.innerWidth);
     setFactIndex((index) => {
       if (index === facts.length - 1) return 0;
       return index + 1;
-     
     });
   };
 
   return (
     <div className="absolute left-[7%] top-1/2 w-1/3 -translate-y-1/2 transform rounded bg-customDarkGreen bg-opacity-80 p-5">
       <div className=" relative flex w-full flex-col items-end  bg-customBrown p-2 text-left ">
-        <div className="flex h-auto w-full flex-shrink flex-grow overflow-hidden transition-transform ease-in-out duration-300">
+        <h3
+          className={`${titleFont.className} w-full bg-customBeige bg-opacity-50 py-2 text-left pl-5 text-4xl`}
+        >
+          Did You Know...
+        </h3>
+        <hr></hr>
+        <div className=" flex w-full flex-shrink flex-grow overflow-hidden bg-customBeige bg-opacity-50">
           {facts.map((fact) => (
-            <p
-              key={fact}
+            <div
+              className="fact-slider flex min-w-full flex-col items-center rounded p-5 text-2xl"
               style={{ translate: `${-100 * factIndex}%` }}
-              className={`${textFont.className} min-w-full rounded bg-customBeige bg-opacity-40 p-5 text-2xl flex items-center fact-slider`}
             >
-              {fact}
-            </p>
+              {/* <h3
+                className={`${titleFont.className} mb-3 w-full text-left text-4xl`}
+              >
+                Did You Know...
+              </h3> */}
+              <p key={fact} className={`${textFont.className} `}>
+                {fact}
+              </p>
+            </div>
           ))}
         </div>
 
         <Link
-          className={`${titleFont.className} mt-2 rounded bg-customBeige p-4`}
+          className={`${titleFont.className} mt-2 flex items-center rounded bg-customBeige p-4`}
           href={paths.farmBeefPath()}
         >
-          Read More
+          Read More <FaArrowAltCircleRight className="ml-2" />
         </Link>
       </div>
       <button
@@ -95,4 +107,3 @@ export default function Slider() {
     </div>
   );
 }
-
