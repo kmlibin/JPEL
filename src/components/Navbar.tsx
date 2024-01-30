@@ -95,7 +95,7 @@ const Navbar = () => {
           onMouseLeave={handleMouseLeave}
           className="nav-links group relative cursor-pointer pb-3 font-bold text-customDarkGreen duration-200 group-hover:scale-105 group-hover:text-customWhite md:mx-[25px] lg:mx-[40px]"
         >
-          <div className="flex items-center">
+          <div className="cattle-link flex items-center">
             <Link href="#" className="flex items-center text-xl">
               Our Cattle
               <IoIosArrowDown
