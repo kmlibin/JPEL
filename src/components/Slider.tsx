@@ -89,13 +89,13 @@ export default function Slider() {
       </div>
       <button
         onClick={showPreviousFact}
-        className="absolute bottom-0 left-[-11%] top-0 cursor-pointer rounded text-5xl duration-200 hover:bg-customDarkGreen hover:bg-opacity-90 "
+        className="absolute bottom-0 lg:left-[-13%] top-0 cursor-pointer rounded text-5xl duration-200 hover:bg-customDarkGreen hover:bg-opacity-90 "
       >
         <IoIosArrowDropleft className="shadow-element mx-2 rounded-[50%] bg-customDarkGreen bg-opacity-90 fill-customBeige duration-200 hover:scale-110" />
       </button>
       <button
         onClick={showNextFact}
-        className="absolute bottom-0 right-[-11%] top-0 cursor-pointer rounded py-5 text-5xl duration-200 hover:bg-customDarkGreen hover:bg-opacity-90"
+        className="absolute bottom-0 lg:right-[-13%] top-0 cursor-pointer rounded py-5 text-5xl duration-200 hover:bg-customDarkGreen hover:bg-opacity-90"
       >
         <IoIosArrowDropright className="shadow-element mx-2 rounded-[50%] bg-customDarkGreen bg-opacity-90 fill-customBeige duration-200 hover:scale-110" />
       </button>
