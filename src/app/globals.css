@@ -2,3 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+.fact-slider {
+    transition: translate 300ms ease-in-out;
+  }
+
+  @media (min-width: 1600px) {
+    .xlscreen {
+        max-height: 90vh;
+    }
+  }
