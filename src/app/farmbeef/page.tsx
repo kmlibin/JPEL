@@ -6,15 +6,19 @@ import { titleFont, textFont } from "../utils/fonts";
 
 export default function FarmBeef() {
   return (
-    <div className="justify-content flex min-h-[100vh] min-w-[100%] flex-col items-center bg-customBrown">
-      <div className="h-[90%] w-[95%] bg-customLightGreen">
+    <div className="justify-content flex min-h-[100vh] min-w-[100%] flex-col items-center bg-customBrown bg-opacity-20">
+      <div className="h-[90%] w-[95%]">
         <div className="relative h-[350px] w-[100%] overflow-hidden">
-          <Image src={seregy2} alt="cow" className="mt-[-20px]" />
+          <Image
+            src={seregy2}
+            alt="cow"
+            className="shadow-element mt-[-20px]"
+          />
         </div>
 
         {/* header */}
 
-        <div className="relative flex w-full items-center justify-center bg-customWhite">
+        <div className="relative flex w-full items-center justify-center ">
           <div
             className={`${titleFont.className} shadow-element absolute  top-[-1rem]  flex  flex-col items-center bg-customDarkGreen p-9 text-5xl text-customWhite`}
           >
@@ -24,40 +28,107 @@ export default function FarmBeef() {
             <h5
               className={`${textFont.className} mt-2 w-[full] text-center text-lg tracking-wide text-customLightGreen opacity-90`}
             >
-              Taste Quality of Highland Beef from JPEL Farms
+              Why JPEL Farm's Beef is a Class Above the Rest
             </h5>
           </div>
+          <hr className="absolute  top-[26%] w-[75%] border-b border-customMediumGreen opacity-20"></hr>
 
-          <div className="flex w-full gap-4 mt-[10rem]">
-            <div className="flex flex-1 items-center bg-cyan-200">
-              <div className="w-[25%]">
-                <p className={`${textFont.className} text-[200px]`}>1</p>
+          {/* 3 content divs */}
+          <div className=" mx-2 mt-[15rem] flex w-full justify-center gap-4 items-stretch">
+            <div className=" shadow-element flex flex-1 items-stretch justify-end rounded bg-customMediumGreen p-2">
+              <div className="h-[100%] w-[27%]">
+                <p className={`${textFont.className} px-5 text-[200px]`}>1</p>
               </div>
-              <div className="w-[75%]">
-                Taste Quality of Highland Beef from JPEL FarmsTaste Quality of
-                Highland Beef from JPEL FarmsTaste Quality of Highland Beef from
-                JPEL Farms
+              <div className=" pb-1 shadow-element h-full flex w-[70%] flex-col items-start justify-start rounded bg-customWhite bg-opacity-50 px-3">
+                <h3
+                  className={`${titleFont.className} m-2 border-b-2 border-customDarkGreen border-opacity-50 text-4xl  leading-snug`}
+                >
+                  Natural Farming
+                </h3>
+                <ul className={`${textFont.className} text-xl`}>
+                  <li className="m-1">
+                    <span className="font-bold">
+                      Organic and Pesticide Free:
+                    </span>{" "}
+                    JPEL Farms follows organic practices, ensuring that their
+                    Highland Cattle are raised without pesticides and harmful
+                    chemicals.
+                  </li>
+                  <br></br>
+                  <li className="m-1">
+                    <span className="font-bold">Grass-Fed Lifestyle:</span> The
+                    cattle lead a natural and healthy life, freely grazing on
+                    grass, resulting in high-quality beef. The cattle's natural
+                    grazing habits enhance the flavor of the beef, making
+                    Highland cattle the preferred choice for producing
+                    specialist beef.
+                  </li>
+                </ul>
               </div>
             </div>
-            <div className="flex flex-1 h-full items-center bg-cyan-200">
-              <div className="w-[25%]">
-                <p className={`${textFont.className} text-[200px]`}>2</p>
+            <div className=" shadow-element flex flex-1 items-stretch justify-between rounded bg-customMediumGreen p-2">
+              <div className="h-[100%] w-[27%]">
+                <p className={`${textFont.className} px-5 text-[200px]`}>2</p>
               </div>
-              <div className="w-[75%]">
-                Taste Quality of Highland Beef from JPEL FarmsTaste Quality of
-                Highland Beef from JPEL FarmsTaste Quality of Highland Beef from
-                JPEL Farms
+              <div className="pb-1 shadow-element flex w-[70%] flex-col items-start justify-start rounded bg-customWhite bg-opacity-50 px-3">
+                <h3
+                  className={`${titleFont.className} m-2 border-b-2 border-customDarkGreen border-opacity-50 text-4xl  leading-snug`}
+                >
+                  Distinctive Traits
+                </h3>
+                <ul className={`${textFont.className} text-xl`}>
+                  <li className="m-1">
+                    <span className="font-bold">Slow Maturing and Lean:</span>{" "}
+                    Highland Beef is known for being slow-maturing, lean, firm,
+                    and low in fat.
+                  </li>
+                  <br></br>
+                  <li className="m-1">
+                    <span className="font-bold">Rich in Protein and Iron:</span>{" "}
+                    Despite its leanness, Highland Beef is rich in protein and
+                    iron, contributing to flavor, tenderness, and juiciness.
+                  </li>
+                  <br></br>
+                  <li className="m-1">
+                    <span className="font-bold">
+                      Versatile Cooking Methods:
+                    </span>{" "}
+                    The meat's marbling allows it to excel in a variety of
+                    cooking methods and recipes.
+                  </li>
+                </ul>
               </div>
             </div>
-            <div className="flex flex-1 items-center bg-cyan-200">
-              <div className="w-[25%]">
-                <p className={`${textFont.className} text-[200px]`}>3</p>
+            <div className=" shadow-element flex h-full flex-1 items-stretch justify-between rounded bg-customMediumGreen p-2">
+              <div className="flex h-[100%] w-[27%]">
+                <p className={`${textFont.className} px-5 text-[200px] `}>3</p>
               </div>
-              <div className="flex w-[75%] flex-col">
-                <p>
-                  of Highland Beef from JPEL FarmsTaste Quality of Highland Beef
-                  from JPEL Farms
-                </p>
+              <div className="pb-1 shadow-element flex w-[70%] h-full flex-col items-start justify-start rounded bg-customWhite bg-opacity-50 px-3">
+                <h3
+                  className={`${titleFont.className} m-2 border-b-2 border-customDarkGreen border-opacity-50 text-4xl leading-snug`}
+                >
+                  Health Benefits
+                </h3>
+                <ul className={`${textFont.className} text-xl`}>
+                  <li className="m-1">
+                    <span className="font-bold">Nutrient-Rich Profile:</span>{" "}
+                    Highland Beef is low in total fat, low in cholesterol, and
+                    high in protein, making it a nutritious choice.
+                  </li>
+                  <br></br>
+                  <li className="m-1">
+                    <span className="font-bold">Omega Fatty Acids:</span> It has
+                    higher levels of beneficial omega-3 fatty acids and lower
+                    levels of omega-6, contributing to heart health.
+                  </li>
+                  <br></br>
+                  <li className="m-1">
+                    <span className="font-bold">Vitamins and Minerals:</span>{" "}
+                    Packed with essential nutrients such as vitamins A, E, B12,
+                    niacin, vitamin B6, phosphorus, zinc, and selenium,
+                    providing various health benefits.
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
