@@ -34,7 +34,7 @@ export default function Home() {
             Naturally Organic, Uniquely Flavorful
           </h3>
           <Link
-            className={`${textFont.className} shadow-outline flex items-center rounded bg-customBeige p-4 underline duration-200 hover:scale-105 hover:bg-customMediumGreen hover:text-customWhite active:scale-90`}
+            className={`${textFont.className} shadow-outline flex items-center rounded bg-customBeige p-4 underline duration-300 hover:scale-105 hover:bg-customMediumGreen hover:text-customWhite active:scale-90`}
             href={paths.farmBeefPath()}
           >
             <p className="font-bold tracking-wider">Read More</p>{" "}
@@ -53,7 +53,7 @@ export default function Home() {
         </h2>
         <div className="shadow-element-grey my-[10rem] flex h-[100%] w-[90%] items-center justify-center rounded bg-customBrown bg-opacity-30 p-6">
           <div className="shadow-element flex h-[95%] w-[100%] items-center justify-between rounded bg-customLightGreen bg-opacity-60 p-4">
-            <div className="flex flex-col w-1/3 justify-center items-center rounded-[50%] py-3">
+            <div className="flex w-1/3 flex-col items-center justify-center rounded-[50%] py-3">
               <Image
                 src={cottage}
                 height={350}
@@ -63,7 +63,7 @@ export default function Home() {
               />
               {/* <h4 className={`${titleFont.className} text-lg my-4`}>John & Peggy</h4> */}
             </div>
-            <div className="flex w-3/5 flex-col items-end text-right mx-auto">
+            <div className="mx-auto flex w-3/5 flex-col items-end text-right">
               <p className={`${textFont.className} p-4 text-3xl leading-snug`}>
                 Discover JPEL Farms, a family-run farm nestled in the scenic
                 landscapes of Colorado. Our passion lies in the meticulous care
@@ -124,16 +124,16 @@ export default function Home() {
                 className="shadow-element rounded-[50%] border border-gray-400"
               />
             </div>
-            <div className="flex w-3/5 flex-col items-end text-right mx-auto">
+            <div className="mx-auto flex w-3/5 flex-col items-end text-right">
               <p className={`${textFont.className} text-3xl leading-snug`}>
                 Discover the exceptional qualities of Highland Beef – a{" "}
                 <span className="font-bold">natural </span>
                 and <span className="font-bold">nutritious</span> choice. With
                 lower fat and cholesterol, higher levels of omega-3 and CLA, and
-                rich with vitamins and minerals, Highland beef promotes heart health and
-                overall well-being. Slow-matured, lean, and packed with
-                essential nutrients, Highland Beef offers unparalleled flavor,
-                tenderness, and juiciness. JPEL Farms proudly offers
+                rich with vitamins and minerals, Highland beef promotes heart
+                health and overall well-being. Slow-matured, lean, and packed
+                with essential nutrients, Highland Beef offers unparalleled
+                flavor, tenderness, and juiciness. JPEL Farms proudly offers
                 USDA-certified cuts.
               </p>
               <Link
