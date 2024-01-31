@@ -81,21 +81,21 @@ export default function Slider() {
         </div>
 
         <Link
-          className={`${titleFont.className} shadow-sm mt-2 flex items-center rounded bg-customBeige hover:bg-customMediumGreen hover:text-customWhite active:scale-90 duration:200 p-4`}
+          className={`${titleFont.className} duration-300 hover:scale-105 mt-2 flex items-center rounded bg-customBeige p-4 tracking-wider underline shadow-sm hover:bg-customMediumGreen hover:text-customWhite active:scale-90`}
           href={paths.farmBeefPath()}
         >
-          Read More <FaArrowAltCircleRight className="ml-2 tracking-wider" />
+          Read More <FaArrowAltCircleRight className="ml-2" />
         </Link>
       </div>
       <button
         onClick={showPreviousFact}
-        className="absolute bottom-0 lg:left-[-13%] top-0 cursor-pointer rounded text-5xl duration-200 hover:bg-customDarkGreen hover:bg-opacity-90 "
+        className="absolute bottom-0 top-0 cursor-pointer rounded text-5xl duration-200 hover:bg-customDarkGreen hover:bg-opacity-90 lg:left-[-13%] "
       >
         <IoIosArrowDropleft className="shadow-element mx-2 rounded-[50%] bg-customDarkGreen bg-opacity-90 fill-customBeige duration-200 hover:scale-110" />
       </button>
       <button
         onClick={showNextFact}
-        className="absolute bottom-0 lg:right-[-13%] top-0 cursor-pointer rounded py-5 text-5xl duration-200 hover:bg-customDarkGreen hover:bg-opacity-90"
+        className="absolute bottom-0 top-0 cursor-pointer rounded py-5 text-5xl duration-200 hover:bg-customDarkGreen hover:bg-opacity-90 lg:right-[-13%]"
       >
         <IoIosArrowDropright className="shadow-element mx-2 rounded-[50%] bg-customDarkGreen bg-opacity-90 fill-customBeige duration-200 hover:scale-110" />
       </button>
