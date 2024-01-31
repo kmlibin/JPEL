@@ -11,16 +11,22 @@ import { textFont } from "../app/utils/fonts";
 
 const DropdownMenu = () => {
   return (
-    <div className="absolute top-6 mt-2 hidden w-[175px] border border-gray-300 bg-white shadow-lg group-hover:block">
-      <ul className="flex flex-col items-end py-2 pr-3 text-right leading-loose">
+    <div className="shadow-element absolute top-6 mt-3 hidden w-[225px] rounded border-2 border-customDarkGreen bg-customWhite group-hover:block">
+      <ul className="flex flex-col items-start py-2 pl-4 text-lg leading-loose">
         <li>
-          <Link href={paths.feedingPath()}>Feeding Plan</Link>
+          <Link href={paths.feedingPath()} className="dropdown-link hover:border-b hover:border-customDarkGreen duration-200">
+            Feeding Plan 
+          </Link>
         </li>
         <li>
-          <Link href={paths.historyPath()}>History of Highland Cattle</Link>
+          <Link href={paths.historyPath()} className="dropdown-link hover:border-b hover:border-customDarkGreen">
+            History of Highland Cattle
+          </Link>
         </li>
         <li>
-          <Link href={paths.studiesPath()}>Cattle Studies</Link>
+          <Link href={paths.studiesPath()} className="dropdown-link hover:border-b hover:border-customDarkGreen">
+            Cattle Studies
+          </Link>
         </li>
       </ul>
     </div>
@@ -67,7 +73,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`${textFont.className} flex w-full items-center justify-center bg-customLightGreen bg-opacity-70 px-4 z-10`}
+      className={`${textFont.className} z-10 flex w-full items-center justify-center bg-customLightGreen bg-opacity-70 px-4`}
     >
       <ul className="hidden h-[75px] items-end md:flex">
         <li className="nav-links link-underline cursor-pointer pb-3 font-bold text-customDarkGreen duration-200 hover:scale-105 hover:text-customWhite md:mx-[25px] lg:mx-[40px]">
@@ -87,7 +93,7 @@ const Navbar = () => {
             height={175}
             width={175}
             alt="JPEL farms"
-            className="rounded-full z-20"
+            className="z-20 rounded-full"
           />
         </div>
         <li
