@@ -4,6 +4,19 @@ import seregy2 from "../../../public/images/seregy2.jpg";
 import beefposter from "../../../public/images/beefposter.png";
 import { titleFont, textFont } from "../utils/fonts";
 
+const cutsAndPrices = [
+  { cut: "Chuck Roast", price: "$8.99/lb" },
+  { cut: "Ribeye Steak", price: "$12.99/lb" },
+  { cut: "Sirloin Steak", price: "$10.99/lb" },
+  { cut: "Tenderloin", price: "$14.99/lb" },
+  { cut: "Brisket", price: "$9.99/lb" },
+  { cut: "Short Ribs", price: "$7.99/lb" },
+  { cut: "Flank Steak", price: "$11.99/lb" },
+  { cut: "Top Round Roast", price: "$9.49/lb" },
+  { cut: "Ground Beef", price: "$6.99/lb" },
+  { cut: "Stew Meat", price: "$7.49/lb" },
+];
+
 export default function FarmBeef() {
   return (
     <div className="justify-content flex min-h-[100vh] min-w-[100%] flex-col items-center bg-customBrown bg-opacity-20">
@@ -36,10 +49,10 @@ export default function FarmBeef() {
 
           {/* 3 content divs */}
           <div className="mx-2 mt-[12rem] flex w-full flex-col items-center justify-center gap-4">
-            <hr className="w-[70%] border-b border-customMediumGreen opacity-20 mb-10"></hr>
+            <hr className="mb-10 w-[70%] border-b border-customMediumGreen opacity-20"></hr>
 
             <div className="flex w-full items-stretch justify-center gap-4">
-              <div className=" shadow-element flex flex-1 items-stretch justify-end rounded bg-customMediumGreen p-2">
+              <div className=" shadow-element flex flex-1 items-stretch justify-end rounded bg-customBrown p-2">
                 <div className="h-[100%] w-[27%]">
                   <p className={`${textFont.className} px-5 text-[200px]`}>1</p>
                 </div>
@@ -70,7 +83,7 @@ export default function FarmBeef() {
                   </ul>
                 </div>
               </div>
-              <div className=" shadow-element flex flex-1 items-stretch justify-between rounded bg-customMediumGreen p-2">
+              <div className=" shadow-element flex flex-1 items-stretch justify-between rounded bg-customBrown p-2">
                 <div className="h-[100%] w-[27%]">
                   <p className={`${textFont.className} px-5 text-[200px]`}>2</p>
                 </div>
@@ -78,7 +91,7 @@ export default function FarmBeef() {
                   <h3
                     className={`${titleFont.className} m-2 border-b-2 border-customDarkGreen border-opacity-50 text-4xl  leading-snug`}
                   >
-                    Distinctive Traits
+                    Unique Traits
                   </h3>
                   <ul className={`${textFont.className} text-xl`}>
                     <li className="m-1">
@@ -105,7 +118,7 @@ export default function FarmBeef() {
                   </ul>
                 </div>
               </div>
-              <div className=" shadow-element flex h-full flex-1 items-stretch justify-between rounded bg-customMediumGreen p-2">
+              <div className=" shadow-element flex h-full flex-1 items-stretch justify-between rounded bg-customBrown p-2">
                 <div className="flex h-[100%] w-[27%]">
                   <p className={`${textFont.className} px-5 text-[200px] `}>
                     3
@@ -140,17 +153,37 @@ export default function FarmBeef() {
                 </div>
               </div>
             </div>
-            <hr className="w-[70%] border-b border-customMediumGreen opacity-20 mt-10"></hr>
+            <hr className="mt-10 w-[70%] border-b border-customMediumGreen opacity-20"></hr>
           </div>
-        </div>
-
-        <div className="mt-[10%] flex">
-          <div className="w-2/3">
-            <Image src={beefposter} alt="cow" />
-          </div>
-          <div className="w-1/3"></div>
         </div>
       </div>
+
+      <div className="shadow-element-light justify-content my-[5%] flex w-3/4 flex-col items-center justify-center bg-customWhite bg-opacity-70 box-content p-12 rounded">
+        <h3 className={`${titleFont.className} w-3/4 text-center text-4xl mb-20`}>
+          Contact us for Premium Highland Beef!
+        </h3>
+        <div className="flex justify-center items-center h-full w-full">
+          <div className="w-2/3">
+            <Image src={beefposter} alt="cow" height={400} width={600} />
+          </div>
+
+          <div className=" shadow-element flex w-1/3 flex-col items-center justify-center rounded bg-customLightGreen p-6">
+              <h4 className={`${titleFont.className} text-2xl mb-4`}>
+                We often have a variety of cuts for sale:
+              </h4>
+              <ul className={`${titleFont.className} shadow-element-light text-xl leading-normal tracking-wide bg-customWhite bg-opacity-50 p-4 rounded`}>
+                {cutsAndPrices.map(({ cut, price }) => (
+                  <li key={cut}>
+                    <strong>{cut}:</strong>&nbsp; <span className={`${textFont.className}`}>{price}</span>
+                  </li>
+                ))}
+              </ul>
+            
+          </div>
+        </div>
+      </div>
+
+      {/* add section for all the things the farm is free of */}
     </div>
   );
 }
