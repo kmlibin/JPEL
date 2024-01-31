@@ -46,11 +46,16 @@ export default function Home() {
       {/* who we are section */}
 
       <div className="relative mx-auto flex w-full items-center justify-center bg-customWhite">
-        <h2
-          className={`${titleFont.className} shadow-element absolute left-[2%] top-[-1rem] ml-[11.75rem] -translate-x-1/2 transform bg-customDarkGreen p-12 text-5xl text-customWhite`}
+          <div
+          className={`${titleFont.className} shadow-element absolute left-[2%] top-[-1rem] ml-[11.5rem] flex -translate-x-1/2 transform flex-col items-center bg-customDarkGreen p-9 text-5xl text-customWhite`}
         >
-          Who We Are
-        </h2>
+          <h2 className="text-center">Who We Are</h2>
+          <h5
+            className={`${textFont.className} mt-2 w-[full] text-center text-lg tracking-wide`}
+          >
+            Local and Sustainable
+          </h5>
+        </div>
         <div className="shadow-element-grey my-[10rem] flex h-[100%] w-[90%] items-center justify-center rounded bg-customBrown bg-opacity-30 p-6">
           <div className="shadow-element flex h-[95%] w-[100%] items-center justify-between rounded bg-customLightGreen bg-opacity-60 p-4">
             <div className="flex w-1/3 flex-col items-center justify-center rounded-[50%] py-3">
@@ -108,11 +113,16 @@ export default function Home() {
 
       {/* buy beef section */}
       <div className="relative mx-auto flex h-full w-full items-center justify-center bg-customWhite">
-        <h2
-          className={`${titleFont.className} shadow-element absolute left-[2%] top-[-1rem] ml-[24rem] -translate-x-1/2 transform bg-customDarkGreen p-12 text-5xl text-customWhite`}
+        <div
+          className={`${titleFont.className} shadow-element absolute left-[2%] top-[-1rem] ml-[24rem] flex -translate-x-1/2 transform flex-col items-center bg-customDarkGreen p-9 text-5xl text-customWhite`}
         >
-          100% Free-Range, Grassfed Beef
-        </h2>
+          <h2 className="text-center">100% Free-Range, Grassfed Beef</h2>
+          <h5
+            className={`${textFont.className} mt-2 w-[50%] text-center text-lg tracking-wide`}
+          >
+            Tender and Equisitely Flavorful Cuts
+          </h5>
+        </div>
         <div className="shadow-element-grey my-[10rem] flex h-[100%] w-[90%] items-center justify-center rounded bg-customBrown bg-opacity-30 p-6">
           <div className="shadow-element flex h-[95%] w-[100%] items-center justify-between rounded bg-customLightGreen bg-opacity-60 p-4">
             <div className="flex w-1/3 justify-center rounded-[50%] py-3">
