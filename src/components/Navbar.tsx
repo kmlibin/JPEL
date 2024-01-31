@@ -87,11 +87,11 @@ const Navbar = () => {
           </Link>
         </li>
 
-        <div className="relative top-[150%]">
+        <div className="relative top-[190%]">
           <Image
             src={smallerlogo}
-            height={175}
-            width={175}
+            height={200}
+            width={200}
             alt="JPEL farms"
             className="z-20 rounded-full"
           />
