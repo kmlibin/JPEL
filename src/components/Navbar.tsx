@@ -14,17 +14,26 @@ const DropdownMenu = () => {
     <div className="shadow-element absolute top-6 mt-3 hidden w-[225px] rounded border-2 border-customDarkGreen bg-customWhite group-hover:block">
       <ul className="flex flex-col items-start py-2 pl-4 text-lg leading-loose">
         <li>
-          <Link href={paths.feedingPath()} className="dropdown-link hover:border-b hover:border-customDarkGreen duration-200">
-            Feeding Plan 
+          <Link
+            href={paths.feedingPath()}
+            className="dropdown-link hover:border-b hover:border-customDarkGreen"
+          >
+            Feeding Plan
           </Link>
         </li>
         <li>
-          <Link href={paths.historyPath()} className="dropdown-link hover:border-b hover:border-customDarkGreen">
+          <Link
+            href={paths.historyPath()}
+            className="dropdown-link hover:border-b hover:border-customDarkGreen"
+          >
             History of Highland Cattle
           </Link>
         </li>
         <li>
-          <Link href={paths.studiesPath()} className="dropdown-link hover:border-b hover:border-customDarkGreen">
+          <Link
+            href={paths.studiesPath()}
+            className="dropdown-link hover:border-b hover:border-customDarkGreen"
+          >
             Cattle Studies
           </Link>
         </li>
