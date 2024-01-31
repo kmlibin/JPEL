@@ -48,7 +48,7 @@ export default function Home() {
       {/* who we are section */}
 
       <div className="relative mx-auto flex w-full items-center justify-center bg-customBrown bg-opacity-5">
-        <div className=" absolute my-auto w-[97%] rounded h-[83%]  border-2 border-customMediumGreen opacity-10"></div>
+        <div className=" absolute my-auto h-[83%] w-[97%] rounded  border-2 border-customMediumGreen opacity-10"></div>
         <div
           className={`${titleFont.className} shadow-element absolute left-[2%] top-[-1rem] ml-[11.5rem] flex -translate-x-1/2 transform flex-col items-center bg-customDarkGreen p-9 text-5xl text-customWhite`}
         >
@@ -58,7 +58,6 @@ export default function Home() {
           >
             Local and Sustainable
           </h5>
-          
         </div>
         <div className=" shadow-element-grey my-[10rem] flex h-[100%] w-[90%] items-center justify-center rounded bg-customBrown bg-opacity-30 p-6">
           <div className=" shadow-element flex h-[95%] w-[100%] items-center justify-between rounded bg-customLightGreen bg-opacity-60 p-4">
@@ -96,12 +95,16 @@ export default function Home() {
 
       {/* fun facts section */}
       <div className=" xlscreen relative flex w-full items-center justify-center lg:h-[110vh]">
-        <h2
-          className={`${titleFont.className} shadow-element absolute right-[2%] top-[-1rem] z-10 bg-customDarkGreen p-12 text-5xl text-customWhite`}
+        <div
+          className={`${titleFont.className} shadow-element absolute right-[2%] top-[-1rem] z-10 flex-col items-center bg-customDarkGreen  p-9 text-5xl text-customWhite`}
         >
-          The Highland Cow
-        </h2>
-
+          <h2 className={`${titleFont.className} `}>The Highland Cow</h2>
+          <h5
+            className={`${textFont.className} mt-2 w-[full] text-center text-lg tracking-wide text-customLightGreen opacity-90`}
+          >
+            Shaggy and Adorable
+          </h5>
+        </div>
         <div className="relative flex h-full w-full items-center justify-end rounded bg-customLightGreen bg-opacity-60">
           <Slider />
           <div className="flex h-full justify-end rounded-[50%] lg:w-[85%]">
@@ -117,7 +120,7 @@ export default function Home() {
 
       {/* buy beef section */}
       <div className="relative mx-auto flex h-full w-full items-center justify-center bg-customBrown bg-opacity-5">
-      <div className=" absolute my-auto w-[97%] rounded h-[83%]  border-2 border-customMediumGreen opacity-10"></div>
+        <div className=" absolute my-auto h-[83%] w-[97%] rounded  border-2 border-customMediumGreen opacity-10"></div>
         <div
           className={`${titleFont.className} shadow-element absolute left-[2%] top-[-1rem] ml-[24rem] flex -translate-x-1/2 transform flex-col items-center bg-customDarkGreen p-9 text-5xl text-customWhite`}
         >
