@@ -12,9 +12,10 @@ const config: Config = {
         customDarkGreen: "#31402A",
         customWhite: "#F2F2F2",
         customLightGreen: "#B5CCAA",
-        customBeige: "#D9C2AD",
-        customBrown: "#A67E6F",
-        customMediumGreen:"#475E41"
+        customBeige: "#D9BFA9",
+        customBrown: "#594438",
+        customRedBrown:"#A67E6F",
+        customMediumGreen:"#475E41",
       },
     },
   },
