@@ -1,11 +1,10 @@
 import Image from "next/image";
-import Link from "next/link";
 import seregy2 from "../../../public/images/seregy2.jpg";
 import beefposter from "../../../public/images/beefposter.png";
 import { titleFont, textFont } from "../utils/fonts";
 import shopsmall from "../../../public/images/shopsmall.png";
 import buybeefcontent from "../../content/BuyBeefContent/buybeefcontent";
-import BeefCard from "@/components/BeefCard";
+import BeefCard from "@/app/farmbeef/BeefCard";
 import Header from "@/components/Header";
 
 export default function FarmBeef() {
@@ -23,8 +22,15 @@ export default function FarmBeef() {
         {/* header */}
 
         <div className="relative flex w-full items-center justify-center ">
-            <Header left="" ml="" translatex= "" transform="" header="Elevating Taste: The Highland Beef Experience" subheader="Why JPEL Farm's Beef is a Class Above the Rest" top="top-[-1rem]"/>
-
+          <Header
+            left=""
+            ml=""
+            translatex=""
+            transform=""
+            header="Elevating Taste: The Highland Beef Experience"
+            subheader="Why JPEL Farm's Beef is a Class Above the Rest"
+            top="top-[-1rem]"
+          />
 
           <hr className=" border-b border-customMediumGreen opacity-20"></hr>
 
@@ -56,16 +62,11 @@ export default function FarmBeef() {
 
       <div className="relative mt-[6%] flex w-full flex-col items-center">
         <div className=" absolute my-auto h-[95%] w-[97%] rounded  border-2 border-customMediumGreen opacity-20"></div>
-        <div
-          className={`${titleFont.className} shadow-element absolute  top-[-2rem]  flex  flex-col items-center bg-customDarkGreen p-9 text-5xl text-customWhite`}
-        >
-          <h2 className="text-center">Contact us Today for Fresh Farm Beef!</h2>
-          <h5
-            className={`${textFont.className} mt-2 w-[full] text-center text-xl tracking-wide text-customLightGreen opacity-90`}
-          >
-            Call us at &nbsp;&nbsp;719 - 123 - 4566
-          </h5>
-        </div>
+        <Header
+          top="top-[-2rem]"
+          header="Contact us Today for Fresh Farm Beef!"
+          subheader="Call us at &nbsp;&nbsp;719 - 123 - 4566"
+        />
 
         <div className="shadow-element-light justify-content mb-[5%] mt-[10%] box-content flex w-3/4  items-center justify-center rounded bg-customWhite p-12">
           <div className="flex h-full w-full items-center justify-center">
