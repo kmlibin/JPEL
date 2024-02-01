@@ -32,6 +32,11 @@ export default function Home() {
                 goes beyond the ordinary – where every bite tells a story of
                 dedication and excellence."
         path={paths.aboutPath()}
+        ml="ml-[11.5rem]"
+        top="top-[-1rem]"
+        left="left-[2%]"
+        translatex="-translate-x-1/2"
+        transform="transform"
       />
 
       {/* fun facts section */}
@@ -74,6 +79,11 @@ export default function Home() {
                 with essential nutrients, Highland Beef offers unparalleled
                 flavor, tenderness, and juiciness. JPEL Farms proudly offers
                 USDA-certified cuts.`}
+        ml="ml-[24.4rem]"
+        top="top-[-1rem]"
+        left="left-[2%]"
+        translatex="-translate-x-1/2"
+        transform="transform"
       />
     </main>
   );
