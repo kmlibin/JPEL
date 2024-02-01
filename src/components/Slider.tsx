@@ -63,12 +63,12 @@ export default function Slider() {
     <div className="shadow-element absolute left-[7%] top-1/2 w-1/3 -translate-y-1/2 transform rounded bg-customDarkGreen bg-opacity-80 p-5">
       <div className="shadow-element relative flex w-full flex-col items-end  bg-customBrown p-2 text-left ">
         <h3
-          className={`${titleFont.className} w-full bg-customBeige bg-opacity-70 py-2 pl-5 text-left text-4xl`}
+          className={`${titleFont.className} w-full bg-customBeige bg-opacity-80 py-2 pl-5 text-left text-4xl`}
         >
           Did You Know...
         </h3>
         <hr></hr>
-        <div className=" flex w-full flex-shrink flex-grow overflow-hidden bg-customBeige bg-opacity-50">
+        <div className=" flex w-full flex-shrink flex-grow overflow-hidden bg-customBeige bg-opacity-70">
           {facts.map((fact) => (
             <div
               key={fact}
