@@ -6,19 +6,7 @@ import { titleFont, textFont } from "../utils/fonts";
 import shopsmall from "../../../public/images/shopsmall.png";
 import buybeefcontent from "../../content/BuyBeefContent/buybeefcontent";
 import BeefCard from "@/components/BeefCard";
-
-const cutsAndPrices = [
-  { cut: "Chuck Roast", price: "$8.99/lb" },
-  { cut: "Ribeye Steak", price: "$12.99/lb" },
-  { cut: "Sirloin Steak", price: "$10.99/lb" },
-  { cut: "Tenderloin", price: "$14.99/lb" },
-  { cut: "Brisket", price: "$9.99/lb" },
-  { cut: "Short Ribs", price: "$7.99/lb" },
-  { cut: "Flank Steak", price: "$11.99/lb" },
-  { cut: "Top Round Roast", price: "$9.49/lb" },
-  { cut: "Ground Beef", price: "$6.99/lb" },
-  { cut: "Stew Meat", price: "$7.49/lb" },
-];
+import Header from "@/components/Header";
 
 export default function FarmBeef() {
   return (
@@ -35,18 +23,8 @@ export default function FarmBeef() {
         {/* header */}
 
         <div className="relative flex w-full items-center justify-center ">
-          <div
-            className={`${titleFont.className} shadow-element absolute  top-[-1rem]  flex  flex-col items-center bg-customDarkGreen p-9 text-5xl text-customWhite`}
-          >
-            <h2 className="text-center">
-              Elevating Taste: The Highland Beef Experience
-            </h2>
-            <h5
-              className={`${textFont.className} mt-2 w-[full] text-center text-lg tracking-wide text-customLightGreen opacity-90`}
-            >
-              Why JPEL Farm's Beef is a Class Above the Rest
-            </h5>
-          </div>
+            <Header left="" ml="" translatex= "" transform="" header="Elevating Taste: The Highland Beef Experience" subheader="Why JPEL Farm's Beef is a Class Above the Rest" top="top-[-1rem]"/>
+
 
           <hr className=" border-b border-customMediumGreen opacity-20"></hr>
 
@@ -56,22 +34,19 @@ export default function FarmBeef() {
 
             <div className="flex w-full items-stretch justify-center gap-4">
               <BeefCard
-              number="1"
+                number="1"
                 content={buybeefcontent.contentOne}
                 color="bg-customBeige"
-                
               />
               <BeefCard
-              number="2"
+                number="2"
                 content={buybeefcontent.contentTwo}
                 color="bg-customRedBrown"
-             
               />
               <BeefCard
-              number="3"
+                number="3"
                 content={buybeefcontent.contentThree}
                 color="bg-customBrown"
-               
               />
             </div>
             <hr className="mt-10 w-[70%] border-b border-customMediumGreen opacity-20"></hr>
@@ -112,7 +87,7 @@ export default function FarmBeef() {
                 <ul
                   className={`${titleFont.className} shadow-element-light w-full rounded bg-customWhite bg-opacity-50 p-4 text-xl leading-normal tracking-wide`}
                 >
-                  {cutsAndPrices.map(({ cut, price }) => (
+                  {buybeefcontent.cutsAndPrices.map(({ cut, price }) => (
                     <li key={cut}>
                       <strong>{cut}:</strong>&nbsp;{" "}
                       <span className={`${textFont.className}`}>{price}</span>
