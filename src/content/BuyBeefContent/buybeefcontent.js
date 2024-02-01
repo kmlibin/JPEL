@@ -56,7 +56,19 @@ export const buybeefcontent = {
       },
     ],
   },
+
+  cutsAndPrices: [
+    { cut: "Chuck Roast", price: "$8.99/lb" },
+    { cut: "Ribeye Steak", price: "$12.99/lb" },
+    { cut: "Sirloin Steak", price: "$10.99/lb" },
+    { cut: "Tenderloin", price: "$14.99/lb" },
+    { cut: "Brisket", price: "$9.99/lb" },
+    { cut: "Short Ribs", price: "$7.99/lb" },
+    { cut: "Flank Steak", price: "$11.99/lb" },
+    { cut: "Top Round Roast", price: "$9.49/lb" },
+    { cut: "Ground Beef", price: "$6.99/lb" },
+    { cut: "Stew Meat", price: "$7.49/lb" },
+  ],
 };
 
-
-export default buybeefcontent
+export default buybeefcontent;
