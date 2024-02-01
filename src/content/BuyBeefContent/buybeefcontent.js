@@ -1,4 +1,4 @@
-export const buybeefcontent = {
+const buybeefcontent = {
   contentOne: {
     header: "Natural Farming",
     list: [
