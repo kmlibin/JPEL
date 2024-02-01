@@ -2,12 +2,12 @@ import { titleFont, textFont } from "@/app/utils/fonts"
 
 interface HeaderProps {
     header: string,
-    subheader: string,
-    top: string,
-    left: string,
-    ml: string
-    translatex: string
-    transform: string
+    subheader?: string,
+    top?: string,
+    left?: string,
+    ml?: string
+    translatex?: string
+    transform?: string
 }
 
 export default function Header({header, subheader, top, left, ml, translatex, transform}: HeaderProps) {
