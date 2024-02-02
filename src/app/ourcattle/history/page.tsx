@@ -22,7 +22,7 @@ export default function HistoryPage() {
 
           {/* //text content cards */}
           <div
-            className={`${textFont.className} shadow-element-light mb-[4rem] mt-[11rem] box-content w-3/4 bg-customLightGreen bg-opacity-20 p-9 text-2xl leading-normal tracking-wide`}
+            className={`${textFont.className} shadow-element-light mb-[4rem] mt-[11rem] box-content w-3/4 bg-customLightGreen bg-opacity-30 p-9 text-2xl leading-normal tracking-wide`}
           >
             <h2 className={`${titleFont.className} px-4 text-4xl`}>
               {history.headerOne}
@@ -31,7 +31,7 @@ export default function HistoryPage() {
 
             <div>
               <Image
-                className="float-right mb-4 ml-8"
+                className="float-right mb-4 ml-8 shadow-element rounded"
                 src={marceldutu}
                 alt="weight lifter"
                 height={600}
@@ -56,7 +56,7 @@ export default function HistoryPage() {
               <p className="my-5 px-4">{history.contentTwo}</p>
 
               <Image
-                className="float-left  mr-8"
+                className="float-left mr-8 shadow-element rounded"
                 src={stories}
                 alt="group of runners"
                 height={600}
