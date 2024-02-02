@@ -9,8 +9,7 @@ import Header from "@/components/GreenHeader";
 
 export default function FarmBeef() {
   return (
-    <div className="relative justify-content flex min-w-[100%] flex-col items-center bg-customBeige bg-opacity-20 pb-10">
-     <div className=" absolute my-auto h-[80%] w-[97%] mt-[24rem] rounded  border-2 border-customMediumGreen opacity-20"></div> 
+    <div className="justify-content relative flex min-w-[100%] flex-col items-center bg-customBeige bg-opacity-20 pb-10">
       <div className="h-[90%] w-[95%]">
         <div className="relative h-[350px] w-[100%] overflow-hidden">
           <Image
@@ -22,8 +21,7 @@ export default function FarmBeef() {
 
         {/* header */}
 
-        <div className="relative flex w-full items-center justify-center ">
-        
+        <div className="relative mb-[5rem] flex w-full items-center justify-center ">
           <Header
             left=""
             ml=""
@@ -35,9 +33,9 @@ export default function FarmBeef() {
           />
 
           <hr className=" border-b border-customMediumGreen"></hr>
-
+          <div className=" absolute -z-10 my-auto mt-[5rem] h-[100%] w-[100%]  rounded border-2 border-customMediumGreen opacity-20"></div>
           {/* 3 content divs */}
-          <div className="mx-2 mt-[12rem] flex w-full flex-col items-center justify-center gap-4">
+          <div className="mx-2 mt-[12rem] flex w-[97%] flex-col items-center justify-center gap-4 pb-20">
             <hr className="mb-10 w-[70%] border-b border-customMediumGreen opacity-40"></hr>
 
             <div className="flex w-full items-stretch justify-center gap-4">
@@ -59,18 +57,26 @@ export default function FarmBeef() {
             </div>
             <hr className="mt-10 w-[70%] border-b border-customMediumGreen opacity-40"></hr>
           </div>
+
+          {/* <div className=" absolute my-auto h-[95%] w-[97%] rounded  border-2 border-customMediumGreen opacity-20"></div> */}
+          <Header
+            top="top-[100%]"
+            header="Contact us Today for Fresh Farm Beef!"
+            subheader="Call us at &nbsp;&nbsp;719 - 123 - 4566"
+     
+          />
         </div>
       </div>
 
       <div className="relative mt-[6%] flex w-full flex-col items-center">
         {/* <div className=" absolute my-auto h-[95%] w-[97%] rounded  border-2 border-customMediumGreen opacity-20"></div> */}
-        <Header
-          top="top-[-2rem]"
+        {/* <Header
+          top="top-[-8rem]"
           header="Contact us Today for Fresh Farm Beef!"
           subheader="Call us at &nbsp;&nbsp;719 - 123 - 4566"
-        />
+        /> */}
 
-        <div className="shadow-element-light justify-content mb-[5%] mt-[10%] box-content flex w-3/4  items-center justify-center rounded bg-customWhite p-12">
+        <div className="shadow-element-light justify-content mb-[5%] mt-[3%] flex w-3/4  items-center justify-center rounded bg-customWhite p-12">
           <div className="flex h-full w-full items-center justify-center">
             <div className="relative w-2/3 pl-7">
               <Image src={beefposter} alt="cow" height={400} width={600} />
