@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { FaArrowAltCircleRight } from "react-icons/fa";
 import { titleFont, textFont } from "@/app/utils/fonts";
-import Header from "../Header";
+import Header from "../GreenHeader";
 
 interface HomeCardProps {
   imgSrc: any;

@@ -6,7 +6,7 @@ import shanerounce from "../../public/images/shanerounce.jpg";
 import ybagmedia from "../../public/images/ybagmedia.jpg";
 import { textFont, titleFont } from "../app/utils/fonts";
 import paths from "./paths";
-import Slider from "@/components/Slider";
+import Slider from "@/components/Home/Slider";
 import { FaArrowAltCircleRight } from "react-icons/fa";
 import { LiaHatCowboySideSolid } from "react-icons/lia";
 import { GiCow } from "react-icons/gi";

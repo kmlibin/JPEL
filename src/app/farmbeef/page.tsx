@@ -5,7 +5,7 @@ import { titleFont, textFont } from "../utils/fonts";
 import shopsmall from "../../../public/images/shopsmall.png";
 import buybeefcontent from "../../content/BuyBeefContent/buybeefcontent";
 import BeefCard from "@/app/farmbeef/BeefCard";
-import Header from "@/components/Header";
+import Header from "@/components/GreenHeader";
 
 export default function FarmBeef() {
   return (
