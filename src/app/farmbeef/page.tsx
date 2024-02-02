@@ -9,7 +9,8 @@ import Header from "@/components/GreenHeader";
 
 export default function FarmBeef() {
   return (
-    <div className="justify-content flex min-h-[100vh] min-w-[100%] flex-col items-center bg-customBeige bg-opacity-20">
+    <div className="relative justify-content flex min-w-[100%] flex-col items-center bg-customBeige bg-opacity-20 pb-10">
+     <div className=" absolute my-auto h-[80%] w-[97%] mt-[24rem] rounded  border-2 border-customMediumGreen opacity-20"></div> 
       <div className="h-[90%] w-[95%]">
         <div className="relative h-[350px] w-[100%] overflow-hidden">
           <Image
@@ -22,6 +23,7 @@ export default function FarmBeef() {
         {/* header */}
 
         <div className="relative flex w-full items-center justify-center ">
+        
           <Header
             left=""
             ml=""
@@ -32,11 +34,11 @@ export default function FarmBeef() {
             top="top-[-1rem]"
           />
 
-          <hr className=" border-b border-customMediumGreen opacity-20"></hr>
+          <hr className=" border-b border-customMediumGreen"></hr>
 
           {/* 3 content divs */}
           <div className="mx-2 mt-[12rem] flex w-full flex-col items-center justify-center gap-4">
-            <hr className="mb-10 w-[70%] border-b border-customMediumGreen opacity-20"></hr>
+            <hr className="mb-10 w-[70%] border-b border-customMediumGreen opacity-40"></hr>
 
             <div className="flex w-full items-stretch justify-center gap-4">
               <BeefCard
@@ -55,13 +57,13 @@ export default function FarmBeef() {
                 color="bg-customBrown"
               />
             </div>
-            <hr className="mt-10 w-[70%] border-b border-customMediumGreen opacity-20"></hr>
+            <hr className="mt-10 w-[70%] border-b border-customMediumGreen opacity-40"></hr>
           </div>
         </div>
       </div>
 
       <div className="relative mt-[6%] flex w-full flex-col items-center">
-        <div className=" absolute my-auto h-[95%] w-[97%] rounded  border-2 border-customMediumGreen opacity-20"></div>
+        {/* <div className=" absolute my-auto h-[95%] w-[97%] rounded  border-2 border-customMediumGreen opacity-20"></div> */}
         <Header
           top="top-[-2rem]"
           header="Contact us Today for Fresh Farm Beef!"
