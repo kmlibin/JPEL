@@ -1,7 +1,7 @@
 import Header from "@/components/GreenHeader";
 import { titleFont, textFont } from "@/app/utils/fonts";
 import Image from "next/image";
-import narrowone from "../../../../public/images/jnarrow.jpg";
+import narrowone from "../../../../public/images/narrow2.jpg";
 import marceldutu from "../../../../public/images/marceldutu.jpg";
 import stories from "../../../../public/images/stories.jpg";
 import history from "@/content/OurCattleContent/history.js";
@@ -13,12 +13,13 @@ export default function HistoryPage() {
           <Image
             src={narrowone}
             alt="cow"
-            className="shadow-element mt-[-20px] w-[100%]"
+            className="shadow-element mt-[-90px] w-[100%]"
           />
         </div>
         <div className="relative flex h-full w-full flex-col items-center justify-center">
           <div className=" absolute my-auto h-[97%] w-[97%] rounded  border-2 border-customMediumGreen opacity-20"></div>
-          <Header header="A Rich History of Highland Cattle" subheader="The World's Oldest Registered Cattle Breed"left="left-14" />
+          <Header header="A Rich History of Highland Cattle" subheader="The World's Oldest Registered Cattle Breed" left="left-14" />
+          {/* left="left-14" to put on left side*/}
 
           {/* //text content cards */}
           <div
