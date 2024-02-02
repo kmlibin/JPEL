@@ -86,8 +86,8 @@ const Navbar = () => {
     >
       <ul className="hidden h-[75px] items-end md:flex">
         <li className="nav-links link-underline cursor-pointer pb-3 font-bold text-customDarkGreen duration-200 hover:scale-105 hover:text-customWhite md:mx-[25px] lg:mx-[40px]">
-          <Link href={paths.homePath()} className="text-xl">
-            Home
+          <Link href={paths.aboutPath()} className="text-xl">
+            About
           </Link>
         </li>
         <li className="nav-links link-underline cursor-pointer pb-3 font-bold text-customDarkGreen duration-200 hover:scale-105  hover:text-customWhite md:mx-[25px] lg:mx-[40px]">
@@ -141,7 +141,7 @@ const Navbar = () => {
         <ul className="absolute left-0 top-0 flex h-screen w-full flex-col items-center justify-center bg-gradient-to-b from-black to-gray-800 text-gray-500">
           <li className="cursor-pointer px-4 py-6 text-4xl capitalize">
             <Link onClick={() => setNav(!nav)} href="#">
-              Home
+              About
             </Link>
           </li>
           <li className="cursor-pointer px-4 py-6 text-4xl capitalize">
