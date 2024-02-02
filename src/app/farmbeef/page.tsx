@@ -21,7 +21,7 @@ export default function FarmBeef() {
 
         {/* header */}
 
-        <div className="relative mb-[5rem] flex w-full items-center justify-center ">
+        <div className="relative mb-[6rem] flex w-full items-center justify-center ">
           <Header
             left=""
             ml=""
@@ -63,7 +63,6 @@ export default function FarmBeef() {
             top="top-[100%]"
             header="Contact us Today for Fresh Farm Beef!"
             subheader="Call us at &nbsp;&nbsp;719 - 123 - 4566"
-     
           />
         </div>
       </div>
@@ -75,42 +74,43 @@ export default function FarmBeef() {
           header="Contact us Today for Fresh Farm Beef!"
           subheader="Call us at &nbsp;&nbsp;719 - 123 - 4566"
         /> */}
-
-        <div className="shadow-element-light justify-content mb-[5%] mt-[3%] flex w-3/4  items-center justify-center rounded bg-customWhite p-12">
-          <div className="flex h-full w-full items-center justify-center">
-            <div className="relative w-2/3 pl-7">
-              <Image src={beefposter} alt="cow" height={400} width={600} />
-            </div>
-            <div className="shadow-element relative box-content flex h-[100%] w-1/3 flex-col items-center justify-center rounded bg-customDarkGreen p-2">
-              <Image
-                src={shopsmall}
-                className="absolute left-[-28%] top-[60%] rounded-full"
-                alt="shopsmall"
-                height={150}
-                width={150}
-              />
-              <div className="flex h-full w-full flex-col items-center justify-center rounded bg-customLightGreen bg-opacity-90 p-6">
-                <h4 className={`${titleFont.className} mb-4 text-2xl`}>
-                  The Menu at JPEL:
-                </h4>
-                <ul
-                  className={`${titleFont.className} shadow-element-light w-full rounded bg-customWhite bg-opacity-50 p-4 text-xl leading-normal tracking-wide`}
-                >
-                  {buybeefcontent.cutsAndPrices.map(({ cut, price }) => (
-                    <li key={cut}>
-                      <strong>{cut}:</strong>&nbsp;{" "}
-                      <span className={`${textFont.className}`}>{price}</span>
-                    </li>
-                  ))}
-                </ul>
-                <div className="mt-3 flex flex-col items-start">
-                  <p className={`${textFont.className}`}>
-                    *We have many more cuts for purchase, please call for
-                    availability
-                  </p>
-                  <p className={`${textFont.className} mt-2`}>
-                    *Prices are subject to change
-                  </p>
+        <div className="w-[80%] flex items-center justify-center bg-customBrown bg-opacity-30 rounded shadow-element">
+          <div className="shadow-element-light justify-content my-[3%] flex w-[93%]  items-center justify-center rounded bg-customWhite p-12">
+            <div className="flex h-full w-full items-center justify-center">
+              <div className="relative w-2/3 pl-7">
+                <Image src={beefposter} alt="cow" height={400} width={600} />
+              </div>
+              <div className="shadow-element relative box-content flex h-[100%] w-1/3 flex-col items-center justify-center rounded bg-customDarkGreen p-2">
+                <Image
+                  src={shopsmall}
+                  className="absolute left-[-28%] top-[60%] rounded-full"
+                  alt="shopsmall"
+                  height={150}
+                  width={150}
+                />
+                <div className="flex h-full w-full flex-col items-center justify-center rounded bg-customLightGreen bg-opacity-90 p-6">
+                  <h4 className={`${titleFont.className} mb-4 text-2xl`}>
+                    The Menu at JPEL:
+                  </h4>
+                  <ul
+                    className={`${titleFont.className} shadow-element-light w-full rounded bg-customWhite bg-opacity-50 p-4 text-xl leading-normal tracking-wide`}
+                  >
+                    {buybeefcontent.cutsAndPrices.map(({ cut, price }) => (
+                      <li key={cut}>
+                        <strong>{cut}:</strong>&nbsp;{" "}
+                        <span className={`${textFont.className}`}>{price}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  <div className="mt-3 flex flex-col items-start">
+                    <p className={`${textFont.className}`}>
+                      *We have many more cuts for purchase, please call for
+                      availability
+                    </p>
+                    <p className={`${textFont.className} mt-2`}>
+                      *Prices are subject to change
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
