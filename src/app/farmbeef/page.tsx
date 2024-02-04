@@ -75,7 +75,7 @@ export default function FarmBeef() {
           subheader="Call us at &nbsp;&nbsp;719 - 123 - 4566"
         /> */}
         <div className="w-[80%] flex items-center justify-center bg-customBrown bg-opacity-30 rounded shadow-element">
-          <div className="shadow-element-light justify-content my-[3%] flex w-[93%]  items-center justify-center rounded bg-customWhite p-12">
+          <div className="shadow-element-light justify-content my-[1.5%] flex w-[97%]  items-center justify-center rounded bg-customWhite p-12">
             <div className="flex h-full w-full items-center justify-center">
               <div className="relative w-2/3 pl-7">
                 <Image src={beefposter} alt="cow" height={400} width={600} />
