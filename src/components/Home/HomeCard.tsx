@@ -41,15 +41,15 @@ export default function HomeCard({
         transform={transform}
       />
 
-      <div className=" shadow-element-grey my-[10rem] flex h-[100%] w-[90%] items-center justify-center rounded bg-customBrown bg-opacity-30 p-6">
-        <div className=" shadow-element flex h-[95%] w-[100%] items-center justify-between rounded bg-customLightGreen bg-opacity-60 p-4">
-          <div className="flex w-1/3 flex-col items-center justify-center rounded-[50%] py-3">
+      <div className=" shadow-element-grey my-[10rem] flex h-[100%] w-[90%] items-center justify-center rounded border-2 border-customBrown border-opacity-5 bg-customBrown bg-opacity-30 p-2">
+        <div className=" shadow-element flex h-[97%] w-[100%] items-center justify-between rounded  bg-customLightGreen bg-opacity-60 p-4">
+          <div className="flex w-1/3 flex-col items-center justify-center  py-3">
             <Image
               src={imgSrc}
               height={350}
               width={350}
               alt="our ranch"
-              className="shadow-element rounded-[50%] border-4 border-customMediumGreen"
+              className="shadow-element border-4 border-customMediumGreen"
             />
             {/* <h4 className={`${titleFont.className} text-lg my-4`}>John & Peggy</h4> */}
           </div>
