@@ -29,8 +29,8 @@ export default function BeefCard({ content, color, number }: BeefCardProps) {
         <ul
           className={`${textFont.className} flex flex-col justify-evenly text-xl`}
         >
-          {content.list.map((item) => (
-            <li className="m-1 mb-4">
+          {content.list.map((item, index) => (
+            <li key={index} className="m-1 mb-4">
               <span className="font-bold">{item.title}</span> {item.content}
             </li>
           ))}
