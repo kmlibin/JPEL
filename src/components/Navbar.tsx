@@ -84,7 +84,7 @@ const Navbar = () => {
     <nav
       className={`${textFont.className} z-10 flex w-full items-center justify-center bg-customLightGreen bg-opacity-70 px-4`}
     >
-      <ul className="hidden h-[75px] items-end md:flex">
+      <ul className="hidden h-[90px] items-end md:flex">
         <li className="nav-links link-underline cursor-pointer pb-3 font-bold text-customDarkGreen duration-200 hover:scale-105 hover:text-customWhite md:mx-[25px] lg:mx-[40px]">
           <Link href={paths.aboutPath()} className="text-xl">
             About
@@ -96,7 +96,7 @@ const Navbar = () => {
           </Link>
         </li>
 
-        <div className="relative top-[190%]">
+        <div className="relative top-[130%]">
           <Image
             src={smallerlogo}
             height={200}
