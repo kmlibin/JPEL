@@ -7,7 +7,7 @@ import stories from "../../../../public/images/stories.jpg";
 import history from "@/content/OurCattleContent/history.js";
 export default function HistoryPage() {
   return (
-    <div className="ustify-content relative flex h-full w-full flex-col items-center bg-customBeige bg-opacity-20">
+    <div className="justify-content relative flex h-full w-full flex-col items-center bg-customBeige bg-opacity-20">
       <div className="h-[90%] w-[95%]">
         <div className=" top-0 h-[350px] w-[100%] overflow-hidden">
           <Image
