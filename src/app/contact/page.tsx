@@ -1,4 +1,3 @@
-"use client";
 import Image from "next/image";
 import { MdLocalPhone } from "react-icons/md";
 import { FaLocationDot } from "react-icons/fa6";
@@ -8,14 +7,11 @@ import Header from "@/components/GreenHeader";
 import { HiOutlineMail } from "react-icons/hi";
 import { FaFacebook } from "react-icons/fa";
 import lukethornton from "../../../public/images/lukethornton.jpg";
-import { sendEmail } from "../actions/sendEmail";
-import { useFormState } from "react-dom";
+import ContactForm from "./ContactForm";
 
 export default function ContactPage() {
-  const [formState, action] = useFormState(sendEmail, { errors: {} });
-
   return (
-    <div className="justify-content relative flex h-[150vh] w-full flex-col items-center bg-customBeige bg-opacity-20 pt-[9rem]">
+    <div className="justify-content flex h-[150vh] w-full flex-col items-center bg-customBeige bg-opacity-20 pt-[9rem]">
       <div className="h-[90%] w-[95%] ">
         <div className="relative flex h-full w-full flex-col items-center justify-center bg-customBeige bg-opacity-20 py-2">
           <div className=" absolute my-auto h-[95%] w-[97%] rounded  border-2 border-customMediumGreen opacity-20"></div>
@@ -93,60 +89,7 @@ export default function ContactPage() {
             </div>
 
             {/* contact form */}
-            <div className=" flex h-[100%] flex-1 flex-col items-center justify-center bg-customDarkGreen">
-              <form
-              action={action}
-                className={`${textFont.className} flex h-full w-3/4 flex-col items-center justify-start`}
-              >
-                <h2
-                  className={`${titleFont.className} mt-5 text-4xl tracking-wide text-customLightGreen`}
-                >
-                  Connect With Us
-                </h2>
-                <div className="flex h-3/4 w-full flex-col justify-evenly">
-                  <input
-                    type="text"
-                    name="name"
-                    placeholder="Enter Your Name"
-                    required
-                    className="w-[100%]  bg-customWhite p-2 text-black"
-                  />
-
-                  <input
-                    type="email"
-                    name="email"
-                    placeholder="Enter a Valid Email"
-                    required
-                    className="w-[100%] bg-customWhite  p-2 text-black"
-                  />
-
-                  <input
-                    type="text"
-                    name="phone"
-                    placeholder="Enter a Phone Number"
-                    required
-                    className="w-[100%] bg-customWhite  p-2 text-black"
-                  />
-
-                  <textarea
-                    name="message"
-                    placeholder="Please tell us how we can help! (maximum 500 words)"
-                    required
-                    className="h-[200px] w-[100%] bg-customWhite p-2 text-black"
-                    maxLength={500}
-                    minLength={15}
-                  />
-                </div>
-                <div className="w-full">
-                  <button
-                    type="submit"
-                    className={`${titleFont.className} w-full rounded-full bg-customBeige py-3`}
-                  >
-                    Send
-                  </button>
-                </div>
-              </form>
-            </div>
+            <ContactForm />
           </div>
         </div>
       </div>
