@@ -1,11 +1,11 @@
-import { Aoboshi_One } from "next/font/google";
+import emailjs from "@emailjs/browser";
 
 interface sendEmailFormState {
   errors: {
     message?: string[];
     phone?: string[];
     email?: string[];
-    name?: string[];
+    fname?: string[];
     _form?: string[];
   };
   success?: boolean;
@@ -15,12 +15,12 @@ export async function sendEmail(
   formState: sendEmailFormState,
   formData: FormData,
 ): Promise<sendEmailFormState> {
-  const name = formData.get("name");
+  const fname = formData.get("name");
   const email = formData.get("email")?.toString();
   const phone = formData.get("phone");
   const message = formData.get("message");
   console.log(name, email, phone, message);
-  
+
   //validate. if valid put in an object to send to email js. if not valid, set up and send back errors
 
   //needs at least a phone OR email. so
@@ -33,12 +33,12 @@ export async function sendEmail(
     };
   }
 
-  if (!name) {
+  if (!fname) {
     return {
-        errors: {
-            name: ['Please provide a name']
-        }
-    }
+      errors: {
+        fname: ["Please provide a name"],
+      },
+    };
   }
 
   if (email) {
@@ -54,10 +54,22 @@ export async function sendEmail(
   }
   if (!message) {
     return {
-        errors: {
-            message: ['Please write a message to JPEL']
-        }
-    }
+      errors: {
+        message: ["Please write a message to JPEL"],
+      },
+    };
+  }
+
+  try {
+    emailjs.send(
+      process.env.REACT_APP_SERVICE_ID!,
+      "template_jwbblc5",
+      { fname, email, phone, message },
+      process.env.REACT_APP_PUBLIC_KEY!,
+    );
+    console.log("success");
+  } catch (error) {
+    console.log(error);
   }
 
   //send to email.js. if success, return no errors. if an issue, return form error
