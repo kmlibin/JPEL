@@ -61,13 +61,16 @@ export async function sendEmail(
   }
 
   try {
-    emailjs.send(
-      process.env.REACT_APP_SERVICE_ID!,
-      "template_jwbblc5",
-      { fname, email, phone, message },
-      process.env.REACT_APP_PUBLIC_KEY!,
-    );
-    console.log("success");
+    emailjs
+      .send(
+        process.env.NEXT_PUBLIC_SERVICE_ID!,
+        "template_jwbblc5",
+        { fname, email, phone, message },
+        process.env.NEXT_PUBLIC_KEY,
+      )
+      .then((result) => {
+        console.log(result.text);
+      });
   } catch (error) {
     console.log(error);
   }
