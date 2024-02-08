@@ -19,7 +19,7 @@ export async function sendEmail(
   const email = formData.get("email")?.toString();
   const phone = formData.get("phone");
   const message = formData.get("message");
-  console.log(name, email, phone, message);
+  // console.log(fname, email, phone, message);
 
   //validate. if valid put in an object to send to email js. if not valid, set up and send back errors
 
@@ -60,75 +60,94 @@ export async function sendEmail(
     };
   }
 
+  //this works from this file
+  //   const params = {
+  //   name: fname,
+  //   message: message,
+  //   phone: phone,
+  //   email: email,
+  // };
+  // console.log('before')
+  // try
+  // {
+  //   emailjs
+  //     .send("service_wtad81t", "template_jwbblc5", params, "dsnGVaDSR6V73PTwC")
+  //     .then((response) => {
+  //       console.log(`response: ${JSON.stringify(response)}`);
+  //       return response;
+  //     });
+  // } catch (error) {
+  //   console.log(error);
+  // }
+
+  // const emailData = {
+  //   service_id: "service_wtad81t",
+  //   template_id: "template_jwbblc5",
+  //   user_id: "dsnGVaDSR6V73PTwC",
+  //   template_params: {
+  //     name: fname,
+  //     message: message,
+  //     phone: phone,
+  //     email: email,
+  //   },
+  // };
+
+  //works JST fine if i call from this file.
+  // try {
+  //       const res = await fetch(
+  //         "https://api.emailjs.com/api/v1.0/email/send/",
+  //         {
+  //           method: "POST",
+  //           headers: {
+  //             "Content-Type": "application/json",
+  //           },
+  //           body: JSON.stringify(emailData),
+  //         },
+  //       )
+
+  //   console.log(res)
+  //   // return Response.json(res)
+  //       if (!res.ok) {
+  //         throw new Error("Failed to send email");
+  //       }
+
+  //     // const responseBody = await res.json();
+
+  //       // const data = await res.json();
+  //       // console.log("Email sent successfully:", data);
+  //       // return data;
+  //     } catch (error) {
+  //       console.error("Error sending email:");
+  //       throw error;
+  //     }
+  //     return {
+  //   errors: {},
+  //   success: true,
+  // };
+
+  //   }
+
+  const emailData = {
+    fname,
+    message,
+    phone: phone || "",
+    email: email || "",
+  };
+
   try {
-    emailjs
-      .send(
-        process.env.NEXT_PUBLIC_SERVICE_ID!,
-        "template_jwbblc5",
-        { fname, email, phone, message },
-        process.env.NEXT_PUBLIC_KEY,
-      )
-      .then((result) => {
-        console.log(result.text);
-      });
-  } catch (error) {
-    console.log(error);
+    const res = await fetch("/api/send", {
+      method: "POST",
+      body: JSON.stringify(emailData),
+    });
+    const data = await res.json();
+    console.log(data);
+  } catch (err) {
+    // console.log(err);
   }
-
-  //send to email.js. if success, return no errors. if an issue, return form error
-
-  //return success or failure
-
   return {
     errors: {},
     success: true,
   };
 }
 
-// const handleSubmit = (e) => {
-//     e.preventDefault();
-//     const isValid = validateForm(formData, setFormErrors);
-//     if (isValid) {
-//       try {
-//         emailjs
-//           .sendForm(
-//             process.env.REACT_APP_SERVICE_ID,
-//             "template_m2bhs6m",
-//             form.current,
-//             process.env.REACT_APP_PUBLIC_KEY
-//           )
-//           .then((result) => {
-//             console.log(result.text);
-//             setSubmissionStatus({
-//               heading: "Success",
-//               message:
-//                 "Thanks for your email. Christian will respond within the next 24 hours.",
-//             });
-
-//             setShowModal(true);
-//             setFormData({
-//               name: "",
-//               lastName: "",
-//               email: "",
-//               phone: "",
-//               preferredContactMethod: "phone",
-//               message: "",
-//             });
-//           });
-//       } catch (error) {
-//         setSubmissionStatus({
-//           heading: "Error",
-//           message:
-//             "Error sending email. Please try again later or email email@email directly",
-//         });
-//         setShowModal(true);
-//       }
-//     } else {
-//       setShowModal(true);
-//       setSubmissionStatus({
-//         heading: "Error",
-//         message:
-//           "Form Validation Failed. Please make sure information is correct or email email@email.com",
-//       });
-//     }
-//   };
+//return success or failure
