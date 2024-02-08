@@ -2,22 +2,22 @@ import { NextApiRequest, NextApiResponse } from "next";
 import emailjs from "@emailjs/browser";
 import { NextRequest, NextResponse } from "next/server";
 
-export async function POST(req: NextRequest) {
+export async function POST(req: NextRequest, res: NextResponse) {
+  //grab info from body
   const body = await req.json();
-
-  const { fname, message, phone, email } = body;
-  console.log(body)
-
+  const { name, message, phone, email } = body;
 
   const service = process.env.SERVICE_KEY;
   const publickey = process.env.NEXT_PUBLIC_KEY;
+  const privatekey = process.env.PRIVATE_KEY;
 
   const emailData = {
-    service_id: "service_wtad81t",
+    service_id: service,
     template_id: "template_jwbblc5",
-    user_id: "dsnGVaDSR6V73PTwC",
+    user_id: publickey,
+    accessToken: privatekey,
     template_params: {
-      name: fname,
+      name: name,
       message: message,
       phone: phone,
       email: email,
@@ -33,20 +33,16 @@ export async function POST(req: NextRequest) {
       body: JSON.stringify(emailData),
     });
 
+    // console.log("Response status:", res.status);
+    // console.log("Response headers:", res.headers);
+    // console.log("Response body:", await res.text()); // Use .text() to read the response body as text
+
     if (!res.ok) {
-   return new NextResponse(JSON.stringify({error:"error with your request"}), {status: 400})
+      console.log("bad request");
+      return Response.json({ status: 400 });
     }
 
-    const data = Response.json(res);
-
-    console.log(data);
-    return data;
-
-    // const responseBody = await res.json();
-
-    // const data = await res.json();
-    // console.log("Email sent successfully:", data);
-    // return data;
+    return Response.json({ status: 200 });
   } catch (error) {
     console.error("Error sending email:");
     throw error;
