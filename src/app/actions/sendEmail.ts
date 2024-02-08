@@ -5,10 +5,10 @@ interface sendEmailFormState {
     message?: string[];
     phone?: string[];
     email?: string[];
-    fname?: string[];
+    name?: string[];
     _form?: string[];
   };
-  success?: boolean;
+  success?: boolean | null;
 }
 
 export async function sendEmail(
@@ -33,12 +33,12 @@ export async function sendEmail(
   if (!name) {
     return {
       errors: {
-        fname: ["Please provide a name"],
+        name: ["Please provide a name"],
       },
     };
   }
 
-  //check for valid email 
+  //check for valid email
   if (email) {
     const emailPattern = /^\S+@\S+\.\S+$/;
     const isValidEmail = emailPattern.test(email);
@@ -98,7 +98,6 @@ export async function sendEmail(
         },
       };
     }
-
   } catch (err) {
     if (err instanceof Error) {
       return {
@@ -114,7 +113,7 @@ export async function sendEmail(
       };
     }
   }
-//runs if everything is fine
+  //runs if everything is fine
   return {
     errors: {},
     success: true,
