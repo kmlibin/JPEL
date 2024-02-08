@@ -1,4 +1,4 @@
-import emailjs from "@emailjs/browser";
+"use server";
 
 interface sendEmailFormState {
   errors: {
@@ -15,13 +15,10 @@ export async function sendEmail(
   formState: sendEmailFormState,
   formData: FormData,
 ): Promise<sendEmailFormState> {
-  const fname = formData.get("name");
+  const name = formData.get("name");
   const email = formData.get("email")?.toString();
   const phone = formData.get("phone");
   const message = formData.get("message");
-  // console.log(fname, email, phone, message);
-
-  //validate. if valid put in an object to send to email js. if not valid, set up and send back errors
 
   //needs at least a phone OR email. so
   if (!phone && !email) {
@@ -33,7 +30,7 @@ export async function sendEmail(
     };
   }
 
-  if (!fname) {
+  if (!name) {
     return {
       errors: {
         fname: ["Please provide a name"],
@@ -41,6 +38,7 @@ export async function sendEmail(
     };
   }
 
+  //check for valid email 
   if (email) {
     const emailPattern = /^\S+@\S+\.\S+$/;
     const isValidEmail = emailPattern.test(email);
@@ -60,90 +58,63 @@ export async function sendEmail(
     };
   }
 
-  //this works from this file
-  //   const params = {
-  //   name: fname,
-  //   message: message,
-  //   phone: phone,
-  //   email: email,
-  // };
-  // console.log('before')
-  // try
-  // {
-  //   emailjs
-  //     .send("service_wtad81t", "template_jwbblc5", params, "dsnGVaDSR6V73PTwC")
-  //     .then((response) => {
-  //       console.log(`response: ${JSON.stringify(response)}`);
-  //       return response;
-  //     });
-  // } catch (error) {
-  //   console.log(error);
-  // }
+  const service = process.env.SERVICE_KEY;
+  const publickey = process.env.NEXT_PUBLIC_KEY;
+  const privatekey = process.env.PRIVATE_KEY;
 
-  // const emailData = {
-  //   service_id: "service_wtad81t",
-  //   template_id: "template_jwbblc5",
-  //   user_id: "dsnGVaDSR6V73PTwC",
-  //   template_params: {
-  //     name: fname,
-  //     message: message,
-  //     phone: phone,
-  //     email: email,
-  //   },
-  // };
-
-  //works JST fine if i call from this file.
-  // try {
-  //       const res = await fetch(
-  //         "https://api.emailjs.com/api/v1.0/email/send/",
-  //         {
-  //           method: "POST",
-  //           headers: {
-  //             "Content-Type": "application/json",
-  //           },
-  //           body: JSON.stringify(emailData),
-  //         },
-  //       )
-
-  //   console.log(res)
-  //   // return Response.json(res)
-  //       if (!res.ok) {
-  //         throw new Error("Failed to send email");
-  //       }
-
-  //     // const responseBody = await res.json();
-
-  //       // const data = await res.json();
-  //       // console.log("Email sent successfully:", data);
-  //       // return data;
-  //     } catch (error) {
-  //       console.error("Error sending email:");
-  //       throw error;
-  //     }
-  //     return {
-  //   errors: {},
-  //   success: true,
-  // };
-
-  //   }
-
+  //set up object for emailjs
   const emailData = {
-    fname,
-    message,
-    phone: phone || "",
-    email: email || "",
+    service_id: service,
+    template_id: "template_jwbblc5",
+    user_id: publickey,
+    accessToken: privatekey,
+    template_params: {
+      name: name,
+      message: message,
+      phone: phone,
+      email: email,
+    },
   };
 
   try {
-    const res = await fetch("/api/send", {
+    const res = await fetch("https://api.emailjs.com/api/v1.0/email/send/", {
       method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
       body: JSON.stringify(emailData),
     });
-    const data = await res.json();
-    console.log(data);
+
+    //check the data, if it's not 200 add an error to the form
+    // const data = await res.json();
+
+    //if there is no response or if status isn't 200, add an error to the form
+    if (!res || res.status !== 200) {
+      return {
+        errors: {
+          _form: [
+            "Failed to send. Please try again later, or call/email us directly",
+          ],
+        },
+      };
+    }
+
   } catch (err) {
-    // console.log(err);
+    if (err instanceof Error) {
+      return {
+        errors: {
+          _form: [err.message],
+        },
+      };
+    } else {
+      return {
+        errors: {
+          _form: ["Something went wrong..."],
+        },
+      };
+    }
   }
+//runs if everything is fine
   return {
     errors: {},
     success: true,
@@ -151,3 +122,70 @@ export async function sendEmail(
 }
 
 //return success or failure
+//this works from this file
+//   const params = {
+//   name: fname,
+//   message: message,
+//   phone: phone,
+//   email: email,
+// };
+// console.log('before')
+// try
+// {
+//   emailjs
+//     .send("service_wtad81t", "template_jwbblc5", params, "dsnGVaDSR6V73PTwC")
+//     .then((response) => {
+//       console.log(`response: ${JSON.stringify(response)}`);
+//       return response;
+//     });
+// } catch (error) {
+//   console.log(error);
+// }
+
+// const emailData = {
+//   service_id: "service_wtad81t",
+//   template_id: "template_jwbblc5",
+//   user_id: "dsnGVaDSR6V73PTwC",
+//   template_params: {
+//     name: fname,
+//     message: message,
+//     phone: phone,
+//     email: email,
+//   },
+// };
+
+// console.log(emailData)
+// //works JST fine if i call from this file.
+// try {
+//       const res = await fetch(
+//         "https://api.emailjs.com/api/v1.0/email/send/",
+//         {
+//           method: "POST",
+//           headers: {
+//             "Content-Type": "application/json",
+//           },
+//           body: JSON.stringify(emailData),
+//         },
+//       )
+
+//   console.log(res)
+//   // return Response.json(res)
+//       if (!res.ok) {
+//         throw new Error("Failed to send email");
+//       }
+
+//     // const responseBody = await res.json();
+
+//       // const data = await res.json();
+//       // console.log("Email sent successfully:", data);
+//       // return data;
+//     } catch (error) {
+//       console.error("Error sending email:");
+//       throw error;
+//     }
+//     return {
+//   errors: {},
+//   success: true,
+// };
+
+//   }
