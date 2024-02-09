@@ -17,7 +17,7 @@ export default function HistoryPage() {
           />
         </div>
         <div className="relative flex h-full w-full flex-col items-center justify-center">
-          <div className=" absolute my-auto h-[97%] w-[100%] rounded  border-2 border-customMediumGreen opacity-20"></div>
+          <div className=" absolute my-auto h-[97%] w-[100%] rounded  border-2 border-customMediumGreen opacity-40"></div>
           <Header header="A Rich History of Highland Cattle" subheader="The World's Oldest Registered Cattle Breed" left="left-14" />
           {/* left="left-14" to put on left side*/}
 

@@ -1,20 +1,19 @@
 import Header from "@/components/GreenHeader";
-import { textFont, titleFont } from "@/app/utils/fonts";
-import Image from "next/image";
+import { textFont } from "@/app/utils/fonts";
+
 import lukethornton from "../../../../public/images/lukethornton.jpg";
-import lori from "../../../../public/images/lorigrimshaw.jpg";
+
 import suraang from "../../../../public/images/suraang.png";
-import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
-import { FaArrowLeftLong } from "react-icons/fa6";
+
 import FeedingCard from "./FeedingCard";
-import feedingplan from '../../../content/OurCattleContent/feedingplan'
+import feedingplan from "../../../content/OurCattleContent/feedingplan";
 
 export default function FeedingPage() {
   return (
     <div className="justify-content relative flex h-full w-full flex-col items-center bg-customBeige bg-opacity-20 pt-[9rem]">
       <div className="h-[90%] w-[95%]">
         <div className="relative flex h-full w-full flex-col items-center justify-center bg-customBeige bg-opacity-40">
-          <div className=" absolute my-auto h-[97%] w-[97%] rounded  border-2 border-customMediumGreen opacity-20"></div>
+          <div className=" absolute my-auto h-[97%] w-[97%] rounded  border-2 border-customMediumGreen opacity-40"></div>
           <Header
             header="Our Committment to Quality"
             subheader="Nutrient-Rich, Natural Diets"
