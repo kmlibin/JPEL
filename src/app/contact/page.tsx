@@ -29,18 +29,18 @@ export default function ContactPage() {
               <div
                 className={`${textFont.className} flex h-2/3 w-full flex-col items-start justify-start bg-customBeige pb-2 `}
               >
-                <div className="mb-2 w-5/6  pl-3">
+                <div className="mb-2 w-5/6 pl-3">
                   <span className="flex items-center">
-                    <MdLocalPhone className="text-xl" />
+                    <MdLocalPhone className="text-xl text-customMediumGreen" />
                     <p className={`${titleFont.className} ml-2 text-xl`}>
                       CALL US
                     </p>
                   </span>
                   <p className="ml-2">1 (719) 123-1234</p>
                 </div>
-                <div className="mt-2 w-3/4  pl-3">
+                <div className="mt-2 w-5/6  pl-3">
                   <span className="flex items-center">
-                    <HiOutlineMail className="text-xl" />
+                    <HiOutlineMail className="text-xl text-customMediumGreen" />
                     <p className={`${titleFont.className} ml-2 text-xl`}>
                       EMAIL US
                     </p>
@@ -49,7 +49,7 @@ export default function ContactPage() {
                 </div>
                 <div className="my-5 w-5/6  pl-3">
                   <span className=" flex items-center">
-                    <FaLocationDot className="text-xl" />
+                    <FaLocationDot className="text-xl text-customMediumGreen" />
                     <p className={`${titleFont.className} ml-2 text-xl`}>
                       LOCATION
                     </p>
@@ -60,7 +60,7 @@ export default function ContactPage() {
                 </div>
                 <div className="mb-2 w-5/6  pl-3">
                   <span className=" flex items-center">
-                    <FaFacebook className="text-xl" />
+                    <FaFacebook className="text-xl text-[#007ab2]" />
                     <p className={`${titleFont.className} ml-2 text-xl`}>
                       Find us on Facebook!
                     </p>
