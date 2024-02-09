@@ -1,12 +1,12 @@
 import Header from "@/components/GreenHeader";
 import { textFont } from "@/app/utils/fonts";
-
 import lukethornton from "../../../../public/images/lukethornton.jpg";
-
 import suraang from "../../../../public/images/suraang.png";
-
+import injection from '../../../../public/images/injection.png';
+import freepik from '../../../../public/images/freepik.png';
 import FeedingCard from "./FeedingCard";
 import feedingplan from "../../../content/OurCattleContent/feedingplan";
+import valdamaras from '../../../../public/images/ValdamarasD.jpg'
 
 export default function FeedingPage() {
   return (
@@ -31,14 +31,14 @@ export default function FeedingPage() {
 
             <FeedingCard
               my="my-[3.5rem]"
-              image={lukethornton}
-              icon={suraang}
+              image={valdamaras}
+              icon={injection}
               text={feedingplan.contentTwo}
             />
 
             <FeedingCard
               image={lukethornton}
-              icon={suraang}
+              icon={freepik}
               text={feedingplan.contentThree}
             />
           </div>
