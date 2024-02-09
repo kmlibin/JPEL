@@ -7,9 +7,9 @@ import { StaticImageData } from "next/image";
 interface FeedingCardProps {
   my?: string;
   text: {
-    header: string,
-    text: string,
-  }
+    header: string;
+    text: string;
+  };
   image: StaticImageData;
   icon: StaticImageData;
 }
@@ -17,9 +17,9 @@ interface FeedingCardProps {
 const FeedingCard = ({ my, text, image, icon }: FeedingCardProps) => {
   return (
     <div
-      className={`${my} shadow-element-light flex w-full items-stretch bg-customMediumGreen bg-opacity-60`}
+      className={`${my} shadow-element-light h-[450px] flex w-full items-stretch bg-customMediumGreen bg-opacity-60 `}
     >
-      <div className="min-h-full w-1/2">
+      <div className="min-h-full w-1/2 overflow-hidden ">
         <Image alt="cow" src={image} className="min-h-full" />
       </div>
 
@@ -37,7 +37,7 @@ const FeedingCard = ({ my, text, image, icon }: FeedingCardProps) => {
           </div>
         </div>
         <div className="absolute right-[-3.5rem] top-9 h-full">
-          <FaArrowLeftLong className="text-[10rem] text-customBrown opacity-90" />
+          <FaArrowLeftLong className="pulsate text-[10rem] text-customBrown opacity-90" />
         </div>
       </div>
     </div>
