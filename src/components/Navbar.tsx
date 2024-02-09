@@ -82,7 +82,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`${textFont.className} z-10 flex w-full items-center justify-center bg-customLightGreen bg-opacity-70 px-4`}
+      className={`${textFont.className} z-10 flex w-full items-center justify-center bg-customLightGreen bg-opacity-70 px-4 border-b-customMediumGreen border-2 border-opacity-10`}
     >
       <ul className="hidden h-[90px] items-end md:flex">
         <li className="nav-links link-underline cursor-pointer pb-3 font-bold text-customDarkGreen duration-200 hover:scale-105 hover:text-customWhite md:mx-[25px] lg:mx-[40px]">
