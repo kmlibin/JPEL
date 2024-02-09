@@ -1,14 +1,13 @@
 import Image from "next/image";
-import { MdLocalPhone } from "react-icons/md";
-import { FaLocationDot } from "react-icons/fa6";
-import { textFont, titleFont } from "../utils/fonts";
-import ybagmedia from "../../../public/images/bruno.jpg";
+
+import { textFont } from "../utils/fonts";
+
 import Header from "@/components/GreenHeader";
-import { HiOutlineMail } from "react-icons/hi";
-import { FaFacebook } from "react-icons/fa";
+
 import lukethornton from "../../../public/images/lukethornton.jpg";
 import ContactForm from "./ContactForm";
-
+import contactContent from "@/content/Contact/contact";
+import Tags from "./Tags";
 export default function ContactPage() {
   return (
     <div className="justify-content flex h-[150vh] w-full flex-col items-center bg-customBeige bg-opacity-20 pt-[9rem]">
@@ -29,43 +28,16 @@ export default function ContactPage() {
               <div
                 className={`${textFont.className} flex h-2/3 w-full flex-col items-start justify-start bg-customBeige pb-2 `}
               >
-                <div className="mb-2 w-5/6 pl-3">
-                  <span className="flex items-center">
-                    <MdLocalPhone className="text-xl text-customMediumGreen" />
-                    <p className={`${titleFont.className} ml-2 text-xl`}>
-                      CALL US
-                    </p>
-                  </span>
-                  <p className="ml-2">1 (719) 123-1234</p>
-                </div>
-                <div className="mt-2 w-5/6  pl-3">
-                  <span className="flex items-center">
-                    <HiOutlineMail className="text-xl text-customMediumGreen" />
-                    <p className={`${titleFont.className} ml-2 text-xl`}>
-                      EMAIL US
-                    </p>
-                  </span>
-                  <p className="ml-2">email@email.com</p>
-                </div>
-                <div className="my-5 w-5/6  pl-3">
-                  <span className=" flex items-center">
-                    <FaLocationDot className="text-xl text-customMediumGreen" />
-                    <p className={`${titleFont.className} ml-2 text-xl`}>
-                      LOCATION
-                    </p>
-                  </span>
-                  <p className="ml-2">
-                    31550 Sanborn Road, Yoder, Colorado 80864
-                  </p>
-                </div>
-                <div className="mb-2 w-5/6  pl-3">
-                  <span className=" flex items-center">
-                    <FaFacebook className="text-xl text-[#007ab2]" />
-                    <p className={`${titleFont.className} ml-2 text-xl`}>
-                      Find us on Facebook!
-                    </p>
-                  </span>
-                </div>
+                {/* phone,email,location, FB */}
+                {contactContent.map((item) => (
+                  <Tags
+                    key={item.header}
+                    icon={item.icon}
+                    header={item.header}
+                    content={item.content}
+                  />
+                ))}
+
                 <div className="mt-8 flex w-full justify-center">
                   <Image
                     alt="cow"
