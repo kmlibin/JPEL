@@ -8,6 +8,22 @@
   box-sizing: border-box;
 }
 
+.pulsate {
+  animation: pulsate-animation 2s infinite;
+}
+
+@keyframes pulsate-animation {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
 .fact-slider {
   transition: translate 300ms ease-in-out;
 }
