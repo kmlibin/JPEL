@@ -7,7 +7,7 @@ const feedingplan = {
       pesticides and herbicides, and you don't want that in your beef!`,
   },
   contentTwo: {
-    header: "No Drugs or Chemicals",
+    header: "No Chemicals",
     text: `We never give our cattle chemicals or hormones, resulting in cleaner beef and happier cows. Our commitment 
     to avoiding chemicals and hormones prioritizes the health and happiness of our cattle, 
     allowing them to thrive in a stress-free environment.`,
