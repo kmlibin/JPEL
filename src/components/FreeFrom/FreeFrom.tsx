@@ -18,7 +18,7 @@ const images = [
 ];
 const FreeFrom = () => {
   return (
-    <div className="shadow-element my-4 flex w-[95%] flex-col items-center justify-center bg-customBrown bg-opacity-25 py-4">
+    <div className=" shadow-element mt-[7rem] mb-4 flex w-[95%] flex-col items-center justify-center bg-customBrown bg-opacity-25 py-4">
       <div
         className={`${titleFont.className} flex flex-col items-center justify-center text-3xl`}
       >
@@ -28,6 +28,7 @@ const FreeFrom = () => {
       <div className="justify-content, flex w-full flex-wrap items-center justify-center">
         {images.map((image) => (
           <img
+          key={image.alt}
             src={image.img.src}
             alt={image.alt}
             className="h-[250px] w-[250px]"
