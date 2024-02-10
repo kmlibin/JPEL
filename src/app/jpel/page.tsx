@@ -8,7 +8,7 @@ import { LiaHatCowboySideSolid } from "react-icons/lia";
 
 export default function AboutPage() {
   return (
-    <div className="justify-content relative flex h-full w-full flex-col items-center bg-customBeige bg-opacity-20 pt-[9rem]">
+    <div className="justify-content relative flex h-full w-full flex-col items-center bg-customBeige bg-opacity-20 pt-[9rem] pb-4">
       <div className="h-[90%] w-[95%]">
         <div className="relative flex h-full w-full flex-col items-center justify-center bg-customBeige bg-opacity-40">
           <div className=" absolute my-auto h-[97%] w-[97%] rounded  border-2 border-customMediumGreen opacity-40"></div>

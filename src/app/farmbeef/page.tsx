@@ -9,7 +9,7 @@ import Header from "@/components/GreenHeader";
 
 export default function FarmBeef() {
   return (
-    <div className="justify-content relative flex min-w-[100%] flex-col items-center bg-customBeige bg-opacity-20 pb-10">
+    <div className="justify-content relative h-full flex min-w-[100%] flex-col items-center bg-customBeige bg-opacity-20 pb-4">
       <div className="h-[90%] w-[95%]">
         <div className="relative h-[350px] w-[100%] overflow-hidden">
           <Image
@@ -39,6 +39,7 @@ export default function FarmBeef() {
             <hr className="mb-10 w-[70%] border-b border-customMediumGreen opacity-40"></hr>
 
             <div className="flex w-full items-stretch justify-center gap-4">
+              {/* TODO put number and color into content file and then map over */}
               <BeefCard
                 number="1"
                 content={buybeefcontent.contentOne}
@@ -67,13 +68,10 @@ export default function FarmBeef() {
         </div>
       </div>
 
+
+{/* TODO split into its own component */}
       <div className="relative mt-[6%] flex w-full flex-col items-center">
-        {/* <div className=" absolute my-auto h-[95%] w-[97%] rounded  border-2 border-customMediumGreen opacity-20"></div> */}
-        {/* <Header
-          top="top-[-8rem]"
-          header="Contact us Today for Fresh Farm Beef!"
-          subheader="Call us at &nbsp;&nbsp;719 - 123 - 4566"
-        /> */}
+
         <div className="w-[80%] flex items-center justify-center bg-customBrown bg-opacity-30 rounded shadow-element">
           <div className="shadow-element-light justify-content my-[1.5%] flex w-[97%]  items-center justify-center rounded bg-customWhite p-12">
             <div className="flex h-full w-full items-center justify-center">

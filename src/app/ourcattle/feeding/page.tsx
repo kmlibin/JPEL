@@ -10,7 +10,7 @@ import valdamaras from '../../../../public/images/ValdamarasD.jpg'
 
 export default function FeedingPage() {
   return (
-    <div className="justify-content relative flex h-full w-full flex-col items-center bg-customBeige bg-opacity-20 pt-[9rem]">
+    <div className="justify-content relative flex h-full w-full flex-col items-center bg-customBeige bg-opacity-20 pt-[9rem] pb-4">
       <div className="h-[90%] w-[95%]">
         <div className="relative flex h-full w-full flex-col items-center justify-center bg-customBeige bg-opacity-40">
           <div className=" absolute my-auto h-[97%] w-[97%] rounded  border-2 border-customMediumGreen opacity-40"></div>
@@ -23,6 +23,7 @@ export default function FeedingPage() {
           <div
             className={`${textFont.className} shadow-element-light relative mb-[4rem] mt-[11rem] box-content flex h-full w-3/4 flex-col justify-evenly bg-customWhite bg-opacity-30 p-9  leading-normal tracking-wide`}
           >
+            {/* //TODO put all (icons and images) into content file and map over */}
             <FeedingCard
               image={lukethornton}
               icon={suraang}

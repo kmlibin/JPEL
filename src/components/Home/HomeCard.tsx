@@ -30,7 +30,7 @@ export default function HomeCard({
 }: HomeCardProps) {
   return (
     <div className="relative mx-auto flex w-full items-center justify-center bg-customBeige bg-opacity-10">
-      <div className=" absolute my-auto h-[83%] w-[97%] rounded  border-2 border-customMediumGreen opacity-20"></div>
+      <div className=" absolute my-auto h-[83%] w-[97%] rounded  border-2 border-customMediumGreen opacity-40"></div>
       <Header
         header={header}
         subheader={subheader}
