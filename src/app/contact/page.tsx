@@ -10,7 +10,7 @@ import contactContent from "@/content/Contact/contact";
 import Tags from "./Tags";
 export default function ContactPage() {
   return (
-    <div className="justify-content flex h-[150vh] w-full flex-col items-center bg-customBeige bg-opacity-20 pt-[9rem]">
+    <div className="justify-content flex h-[150vh] w-full flex-col items-center justify-end bg-customBeige bg-opacity-20 pb-4">
       <div className="h-[90%] w-[95%] ">
         <div className="relative flex h-full w-full flex-col items-center justify-center bg-customBeige bg-opacity-40 py-2">
           <div className=" absolute my-auto h-[95%] w-[97%] rounded  border-2 border-customMediumGreen opacity-40"></div>
