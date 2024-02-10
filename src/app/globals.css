@@ -50,6 +50,9 @@
   .xlscreen {
     max-height: 90vh;
   }
+  .newwidths{
+    width: 50%;
+  }
 }
 
 .nav-links a {
