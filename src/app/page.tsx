@@ -7,9 +7,7 @@ import ybagmedia from "../../public/images/ybagmedia.jpg";
 import { textFont, titleFont } from "../app/utils/fonts";
 import paths from "./paths";
 import Slider from "@/components/Home/Slider";
-import { FaArrowAltCircleRight } from "react-icons/fa";
-import { LiaHatCowboySideSolid } from "react-icons/lia";
-import { GiCow } from "react-icons/gi";
+
 import Hero from "@/components/Home/Hero";
 import HomeCard from "@/components/Home/HomeCard";
 import homecontent from '@/content/HomeContent/homecontent.js'

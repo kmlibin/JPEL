@@ -3,6 +3,7 @@ import Link from "next/link";
 import { FaArrowAltCircleRight } from "react-icons/fa";
 import { titleFont, textFont } from "@/app/utils/fonts";
 import Header from "../GreenHeader";
+import paths from '../../app/paths'
 
 interface HomeCardProps {
   imgSrc: any;
@@ -59,10 +60,10 @@ export default function HomeCard({
             </p>
             <Link
               className={`${titleFont.className} shadow-element-grey mt-4 flex items-center rounded bg-customDarkGreen p-4 tracking-wider
-            text-customWhite underline duration-200 hover:scale-105 hover:bg-customMediumGreen active:scale-90`}
+            text-customWhite underline duration-200 hover:scale-105 hover:bg-customMediumGreen active:scale-90 z-40`}
               href={path}
             >
-              Learn More <FaArrowAltCircleRight className="ml-2" />
+             Learn More <FaArrowAltCircleRight className="ml-2" />
             </Link>
           </div>
         </div>
