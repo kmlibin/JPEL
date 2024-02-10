@@ -1,13 +1,8 @@
 import Header from "@/components/GreenHeader";
-import { textFont } from "@/app/utils/fonts";
-import lukethornton from "../../../../public/images/lukethornton.jpg";
-import suraang from "../../../../public/images/suraang.png";
-import injection from '../../../../public/images/injection.png';
-import freepik from '../../../../public/images/freepik.png';
+
 import FeedingCard from "./FeedingCard";
 import feedingplan from "../../../content/OurCattleContent/feedingplan";
-import valdamaras from '../../../../public/images/ValdamarasD.jpg'
-import FreeFrom from '../../../components/FreeFrom/FreeFrom'
+import FreeFrom from "../../../components/FreeFrom/FreeFrom";
 
 export default function FeedingPage() {
   return (
@@ -21,29 +16,23 @@ export default function FeedingPage() {
             left="left-14"
           />
 
-          <div
+          {/* <div
             className={`${textFont.className} shadow-element-light relative mb-[4rem] mt-[11rem] box-content flex h-full w-3/4 flex-col justify-evenly bg-customWhite bg-opacity-30 p-9  leading-normal tracking-wide`}
-          >
-            {/* //TODO put all (icons and images) into content file and map over */}
+          > */}
+          {/* //TODO put all (icons and images) into content file and map over */}
+          {feedingplan.map((item) => (
             <FeedingCard
-              image={lukethornton}
-              icon={suraang}
-              text={feedingplan.contentOne}
+              icon={item.icon}
+              image={item.img}
+              mb={item.mb}
+              mt={item.mt}
+              my={item.my}
+              header={item.header}
+              text={item.text}
+              alt={item.alt}
             />
-
-            <FeedingCard
-              my="my-[3.5rem]"
-              image={valdamaras}
-              icon={injection}
-              text={feedingplan.contentTwo}
-            />
-
-            <FeedingCard
-              image={lukethornton}
-              icon={freepik}
-              text={feedingplan.contentThree}
-            />
-          </div>
+          ))}
+          {/* </div> */}
         </div>
       </div>
       <FreeFrom />
