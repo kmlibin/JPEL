@@ -7,10 +7,11 @@ import freepik from '../../../../public/images/freepik.png';
 import FeedingCard from "./FeedingCard";
 import feedingplan from "../../../content/OurCattleContent/feedingplan";
 import valdamaras from '../../../../public/images/ValdamarasD.jpg'
+import FreeFrom from '../../../components/FreeFrom/FreeFrom'
 
 export default function FeedingPage() {
   return (
-    <div className="justify-content relative flex h-full w-full flex-col items-center bg-customBeige bg-opacity-20 pt-[9rem] pb-4">
+    <div className="justify-content relative flex h-full w-full flex-col items-center bg-customBeige bg-opacity-20 pt-[9rem] ">
       <div className="h-[90%] w-[95%]">
         <div className="relative flex h-full w-full flex-col items-center justify-center bg-customBeige bg-opacity-40">
           <div className=" absolute my-auto h-[97%] w-[97%] rounded  border-2 border-customMediumGreen opacity-40"></div>
@@ -45,6 +46,7 @@ export default function FeedingPage() {
           </div>
         </div>
       </div>
+      <FreeFrom />
     </div>
   );
 }
