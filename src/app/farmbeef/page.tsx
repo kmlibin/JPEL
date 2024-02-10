@@ -1,15 +1,17 @@
 import Image from "next/image";
 import seregy2 from "../../../public/images/seregy2.jpg";
+import JPELlabel from "../../../public/images/JPELlabel.svg";
 import beefposter from "../../../public/images/beefposter.png";
 import { titleFont, textFont } from "../utils/fonts";
-import shopsmall from "../../../public/images/shopsmall.png";
+import supportlocal from "../../../public/images/supportlocal.png";
 import buybeefcontent from "../../content/BuyBeefContent/buybeefcontent";
 import BeefCard from "@/app/farmbeef/BeefCard";
 import Header from "@/components/GreenHeader";
+import usda from "../../../public/images/usda.png";
 
 export default function FarmBeef() {
   return (
-    <div className="justify-content relative h-full flex min-w-[100%] flex-col items-center bg-customBeige bg-opacity-20 pb-4">
+    <div className="justify-content relative flex h-full min-w-[100%] flex-col items-center bg-customBeige bg-opacity-20 pb-4">
       <div className="h-[90%] w-[95%]">
         <div className="relative h-[350px] w-[100%] overflow-hidden">
           <Image
@@ -68,24 +70,24 @@ export default function FarmBeef() {
         </div>
       </div>
 
-
-{/* TODO split into its own component */}
-      <div className="relative mt-[6%] flex w-full flex-col items-center">
-
-        <div className="w-[80%] flex items-center justify-center bg-customBrown bg-opacity-30 rounded shadow-element">
-          <div className="shadow-element-light justify-content my-[1.5%] flex w-[97%]  items-center justify-center rounded bg-customWhite p-12">
-            <div className="flex h-full w-full items-center justify-center">
-              <div className="relative w-2/3 pl-7">
-                <Image src={beefposter} alt="cow" height={400} width={600} />
+      {/* TODO split into its own component */}
+      <div className="mt-[6%] flex w-full flex-col items-center">
+        <div className="shadow-element flex w-[80%] items-center justify-center rounded bg-customBrown bg-opacity-30">
+          <div className=" shadow-element-light justify-content relative my-[1.5%] flex w-[97%]  items-center justify-center rounded bg-customWhite p-12">
+            <div className="absolute bottom-10 right-10 flex h-[140px] w-[140px] items-center  justify-center rounded-full bg-[#F4ECE4]">
+              <img
+                src={supportlocal.src}
+                className="min-h-[190px] min-w-[190px]"
+              />
+            </div>
+            <div className=" flex h-full w-full items-center justify-center">
+              {/* <div className="absolute top-[0] left-[15%] flex h-[140px] w-[140px] items-center justify-center rounded-full border-2 border-customBrown bg-[#F4ECE4]">
+                <img src={usda.src} className="" />
+              </div> */}
+              <div className="mr-2 flex justify-start lg:w-2/3 sm:w-1/2">
+                <Image src={JPELlabel} alt="cow" className="h-auto w-[650px]" />
               </div>
-              <div className="shadow-element relative box-content flex h-[100%] w-1/3 flex-col items-center justify-center rounded bg-customDarkGreen p-2">
-                <Image
-                  src={shopsmall}
-                  className="absolute left-[-28%] top-[60%] rounded-full"
-                  alt="shopsmall"
-                  height={150}
-                  width={150}
-                />
+              <div className=" shadow-element box-content flex h-[100%] w-1/3 flex-col items-center justify-center rounded bg-customDarkGreen p-2">
                 <div className="flex h-full w-full flex-col items-center justify-center rounded bg-customLightGreen bg-opacity-90 p-6">
                   <h4 className={`${titleFont.className} mb-4 text-2xl`}>
                     The Menu at JPEL:
