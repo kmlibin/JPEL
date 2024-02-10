@@ -3,7 +3,7 @@ import seregy2 from "../../../public/images/seregy2.jpg";
 
 import line from "../../../public/images/line.png";
 
-import buybeefcontent from "../../content/BuyBeefContent/buybeefcontent";
+import { buybeefcontent } from "../../content/BuyBeefContent/buybeefcontent";
 import BeefCard from "@/app/farmbeef/BeefCard";
 import Header from "@/components/GreenHeader";
 import usda from "../../../public/images/usda.png";
@@ -43,21 +43,14 @@ export default function FarmBeef() {
             <img src={line.src} alt="line" className="mb-10 w-1/3" />
             <div className="flex w-full items-stretch justify-center gap-4">
               {/* TODO put number and color into content file and then map over */}
-              <BeefCard
-                number="1"
-                content={buybeefcontent.contentOne}
-                color="bg-customBeige"
-              />
-              <BeefCard
-                number="2"
-                content={buybeefcontent.contentTwo}
-                color="bg-customRedBrown"
-              />
-              <BeefCard
-                number="3"
-                content={buybeefcontent.contentThree}
-                color="bg-customBrown"
-              />
+              {buybeefcontent.map((content) => (
+                <BeefCard
+                  number={content.number}
+                  color={content.color}
+                  list={content.list}
+                  header={content.header}
+                />
+              ))}
             </div>
             <img src={line.src} alt="line" className="mb-[-4rem] mt-10 w-1/3" />
             {/* <hr className="mt-10 w-[70%] border-b border-customMediumGreen opacity-40"></hr> */}

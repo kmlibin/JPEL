@@ -3,16 +3,14 @@ import { titleFont, textFont } from "@/app/utils/fonts";
 interface BeefCardProps {
   color: string;
   number: string;
-  content: {
-    header: string;
-    list: {
+  header: string;
+  list: {
       title: string;
       content: string;
-    }[];
-  };
+  }[];
 }
 
-export default function BeefCard({ content, color, number }: BeefCardProps) {
+export default function BeefCard({ list, color, number, header }: BeefCardProps) {
   return (
     <div
       className={`shadow-element ${color} flex flex-1 items-stretch justify-between rounded bg-opacity-90 p-2`}
@@ -24,12 +22,12 @@ export default function BeefCard({ content, color, number }: BeefCardProps) {
         <h3
           className={`${titleFont.className} m-2 border-b-2 border-customDarkGreen border-opacity-50 text-4xl  leading-snug`}
         >
-          {content.header}
+          {header}
         </h3>
         <ul
           className={`${textFont.className} flex flex-col justify-evenly text-xl`}
         >
-          {content.list.map((item, index) => (
+          {list.map((item, index) => (
             <li key={index} className="m-1 mb-4">
               <span className="font-bold">{item.title}</span> {item.content}
             </li>
