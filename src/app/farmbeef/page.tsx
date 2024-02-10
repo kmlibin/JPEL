@@ -42,9 +42,10 @@ export default function FarmBeef() {
             {/* <hr className="mb-10 w-[70%] border-b border-customMediumGreen opacity-40"></hr> */}
             <img src={line.src} alt="line" className="mb-10 w-1/3" />
             <div className="flex w-full items-stretch justify-center gap-4">
-              {/* TODO put number and color into content file and then map over */}
+
               {buybeefcontent.map((content) => (
                 <BeefCard
+                  key={content.header}
                   number={content.number}
                   color={content.color}
                   list={content.list}
