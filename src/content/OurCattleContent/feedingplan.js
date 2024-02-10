@@ -1,8 +1,9 @@
+
 const feedingplan = [
   {
-    img: "../../../../public/images/lukethornton.jpg",
+    img: "/images/lukethornton.jpg",
     alt: "cow",
-    icon: "../../../../public/images/suraang.png",
+    icon: "/images/suraang.png",
     mt: "mt-[11rem]",
     header: "No Corn or Soy",
     text: `Feeding corn or soy to cattle deviates from their natural diet,
@@ -12,8 +13,8 @@ const feedingplan = [
   },
   {
     alt: "cow",
-    img: "../../../../public/images/ValdamarasD.jpg",
-    icon: "../../../../public/images/injection.png",
+    img: "/images/ValdamarasD.jpg",
+    icon: "/images/injection.png",
     my: "my-[2.5rem]",
     header: "No Chemicals",
     text: `We never give our cattle chemicals or hormones, resulting in cleaner beef and happier cows. Our commitment 
@@ -24,8 +25,8 @@ const feedingplan = [
   {
     alt: "cow",
     mb: "mb-[4rem]",
-    img: "../../../../public/images/lukethornton.jpg",
-    icon: "../../../../public/images/freepik.png",
+    img: "/images/lukethornton.jpg",
+    icon: "/images/freepik.png",
     header: "100% Grass-fed",
     text: `Aside from grazing, we provide our cattle a mix of grass, hay, alfalfa, and brewers grain. 
     This provides year-round consistency in flavor and texture. They also get a free-choice mixture 

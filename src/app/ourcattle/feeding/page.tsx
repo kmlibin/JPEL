@@ -22,6 +22,7 @@ export default function FeedingPage() {
           {/* //TODO put all (icons and images) into content file and map over */}
           {feedingplan.map((item) => (
             <FeedingCard
+              key={item.header}
               icon={item.icon}
               image={item.img}
               mb={item.mb}
