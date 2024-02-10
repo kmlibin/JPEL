@@ -18,7 +18,7 @@ const images = [
 ];
 const FreeFrom = () => {
   return (
-    <div className=" shadow-element mt-[7rem] mb-4 flex w-[95%] flex-col items-center justify-center bg-customBrown bg-opacity-25 py-4">
+    <div className="  mt-[7rem] mb-4 flex w-[95%] flex-col items-center justify-center  py-4">
       <div
         className={`${titleFont.className} flex flex-col items-center justify-center text-3xl`}
       >
