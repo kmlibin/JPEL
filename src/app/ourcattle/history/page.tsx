@@ -5,6 +5,7 @@ import narrowone from "../../../../public/images/narrow2.jpg";
 import marceldutu from "../../../../public/images/marceldutu.jpg";
 import stories from "../../../../public/images/stories.jpg";
 import history from "@/content/OurCattleContent/history.js";
+import line from '../../../../public/images/line.png';
 export default function HistoryPage() {
   return (
     <div className="justify-content relative flex h-full w-full flex-col items-center bg-customBeige bg-opacity-20">
@@ -29,7 +30,6 @@ export default function HistoryPage() {
               {history.headerOne}
             </h2>
             <hr className=" mt-2 mb-8 border-b border-customMediumGreen opacity-20"></hr>
-
             <div>
               <Image
                 className="float-right mb-4 ml-8 shadow-element rounded"

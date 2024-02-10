@@ -3,6 +3,7 @@ import { titleFont } from "@/app/utils/fonts";
 import Image from "next/image";
 import { FaArrowLeftLong } from "react-icons/fa6";
 import { StaticImageData } from "next/image";
+import line from '../../../../public/images/line.png'
 
 interface FeedingCardProps {
   my?: string;
@@ -31,7 +32,8 @@ const FeedingCard = ({ my, text, image, icon }: FeedingCardProps) => {
               <h3 className={`${titleFont.className} text-3xl`}>
                 {text.header}
               </h3>
-              <hr className="my-2 w-[70%] border-b border-customBrown opacity-80"></hr>
+              <img src={line.src} alt="line" className="w-1/2" />
+              {/* <hr className="my-2 w-[70%] border-b border-customBrown opacity-80"></hr> */}
               <p className="w-5/6 pt-2 text-[18px]">{text.text}</p>
             </div>
           </div>

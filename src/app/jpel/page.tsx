@@ -5,6 +5,7 @@ import Header from "@/components/GreenHeader";
 import stories from "../../../public/images/stories.jpg";
 import { textFont, titleFont } from "../utils/fonts";
 import { LiaHatCowboySideSolid } from "react-icons/lia";
+import line from "../../../public/images/line.png";
 
 export default function AboutPage() {
   return (
@@ -58,7 +59,7 @@ export default function AboutPage() {
                 Meet John and Peggy
               </h2>
               <hr className=" mb-8 mt-2 w-2/3 border-b border-customMediumGreen opacity-20"></hr> */}
-              <p className="my-5 px-4">
+              <p className="mt-5 mb-2 px-4">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua. Nec
                 tincidunt praesent semper feugiat. Eu nisl nunc mi ipsum
@@ -72,7 +73,8 @@ export default function AboutPage() {
                 diam. Non diam phasellus vestibulum lorem sed risus ultricies.
                 Dui nunc mattis enim ut tellus. Rhoncus est pellentesque elit
                 ullamcorper dignissim.</p>
-                <hr className=" my-8 w-2/3 border-b border-customMediumGreen opacity-20"></hr>
+                <img src={line.src} alt="line" className="w-3/4 mb-3" />
+                {/* <hr className=" my-8 w-2/3 border-b border-customMediumGreen opacity-20"></hr> */}
                 <p>Sed arcu non odio euismod lacinia at quis risus. Faucibus et
                 molestie ac feugiat sed. Duis at consectetur lorem donec massa
                 sapien faucibus et molestie. Et magnis dis parturient montes
