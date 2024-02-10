@@ -11,7 +11,7 @@ export default function FeedingPage() {
         <div className="relative flex h-full w-full flex-col items-center justify-center bg-customBeige bg-opacity-40">
           <div className=" absolute my-auto h-[97%] w-[97%] rounded  border-2 border-customMediumGreen opacity-40"></div>
           <Header
-            header="Our Committment to Quality"
+            header="Quality Starts Here"
             subheader="Nutrient-Rich, Natural Diets"
             left="left-14"
           />
