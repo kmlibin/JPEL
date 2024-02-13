@@ -8,7 +8,7 @@ import { buybeefcontent } from "../../content/BuyBeefContent/buybeefcontent";
 import BeefCard from "@/app/farmbeef/BeefCard";
 import Header from "@/components/GreenHeader";
 import usda from "../../../public/images/usda.png";
-import { Fade } from "react-awesome-reveal";
+import { Fade, JackInTheBox } from "react-awesome-reveal";
 import Menu from "./Menu";
 import FreeFrom from "@/components/FreeFrom/FreeFrom";
 
@@ -26,7 +26,7 @@ export default function FarmBeef() {
 
         {/* header */}
 
-        <div className="relative mb-[6rem] flex w-full items-center justify-center ">
+        <div className="relative mb-[6rem] flex w-full flex-col items-center justify-center ">
           <Header
             left=""
             ml=""
@@ -51,6 +51,7 @@ export default function FarmBeef() {
                 damping={1}
                 duration={500}
                 direction="left"
+                triggerOnce
               >
                 {buybeefcontent.map((content) => (
                   <BeefCard
@@ -68,15 +69,23 @@ export default function FarmBeef() {
           </div>
 
           {/* <div className=" absolute my-auto h-[95%] w-[97%] rounded  border-2 border-customMediumGreen opacity-20"></div> */}
-          <Header
-            top="top-[100%]"
-            header="Contact us Today for Fresh Farm Beef!"
-            subheader="Call us at &nbsp;&nbsp;719 - 123 - 4566"
-          />
+          <JackInTheBox triggerOnce className="flex w-full justify-center">
+            <Header
+              top="top-[100%]"
+              header="Contact us Today for Fresh Farm Beef!"
+              subheader="Call us at &nbsp;&nbsp;719 - 123 - 4566"
+              direction=""
+            />
+          </JackInTheBox>
         </div>
       </div>
-
-      <Menu />
+      <Fade
+        duration={2000}
+        triggerOnce
+        className="flex w-full items-center justify-center"
+      >
+        <Menu />
+      </Fade>
       <FreeFrom />
     </div>
   );
