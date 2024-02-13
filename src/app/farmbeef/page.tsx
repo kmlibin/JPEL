@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import seregy2 from "../../../public/images/seregy2.jpg";
 
@@ -7,6 +8,7 @@ import { buybeefcontent } from "../../content/BuyBeefContent/buybeefcontent";
 import BeefCard from "@/app/farmbeef/BeefCard";
 import Header from "@/components/GreenHeader";
 import usda from "../../../public/images/usda.png";
+import { Fade } from "react-awesome-reveal";
 import Menu from "./Menu";
 import FreeFrom from "@/components/FreeFrom/FreeFrom";
 
@@ -33,27 +35,35 @@ export default function FarmBeef() {
             header="Elevating Taste: The Highland Beef Experience"
             subheader="Why JPEL Farm's Beef is a Class Above the Rest"
             top="top-[-1rem]"
+            direction="down"
           />
 
           <hr className=" border-b border-customMediumGreen"></hr>
           <div className=" absolute -z-10 my-auto mt-[5rem] h-[100%] w-[100%]  rounded border-2 border-customMediumGreen opacity-20"></div>
           {/* 3 content divs */}
-          <div className="mx-2 mt-[9rem] flex w-[97%] flex-col items-center justify-center gap-4 pb-20">
+          <div className="mx-2 mt-[10rem] flex w-[97%] flex-col items-center justify-center gap-4 pb-20">
             {/* <hr className="mb-10 w-[70%] border-b border-customMediumGreen opacity-40"></hr> */}
             <img src={line.src} alt="line" className="mb-10 w-1/3" />
             <div className="flex w-full items-stretch justify-center gap-4">
-
-              {buybeefcontent.map((content) => (
-                <BeefCard
-                  key={content.header}
-                  number={content.number}
-                  color={content.color}
-                  list={content.list}
-                  header={content.header}
-                />
-              ))}
+              <Fade
+                className="flex w-full items-stretch justify-center gap-4"
+                cascade
+                damping={1}
+                duration={500}
+                direction="left"
+              >
+                {buybeefcontent.map((content) => (
+                  <BeefCard
+                    key={content.header}
+                    number={content.number}
+                    color={content.color}
+                    list={content.list}
+                    header={content.header}
+                  />
+                ))}
+              </Fade>
             </div>
-            <img src={line.src} alt="line" className="mb-[-4rem] mt-10 w-1/3" />
+            <img src={line.src} alt="line" className="mb-[-3rem] mt-10 w-1/3" />
             {/* <hr className="mt-10 w-[70%] border-b border-customMediumGreen opacity-40"></hr> */}
           </div>
 

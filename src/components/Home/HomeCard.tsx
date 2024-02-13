@@ -44,9 +44,9 @@ export default function HomeCard({
         transform={transform}
         direction="left"
       />
-
+    <Fade duration={1500} className="flex items-center justify-center">
       <div className=" shadow-element-grey my-[10rem] flex h-[100%] w-[90%] items-center justify-center rounded border-2 border-customBrown border-opacity-5 bg-customBrown bg-opacity-30 p-2">
-        <Fade duration={1000}>
+    
           <div className=" shadow-element flex h-[97%] w-[100%] items-center justify-between rounded  bg-customLightGreen bg-opacity-60 p-4">
             <div className="flex w-1/3 flex-col items-center justify-center  py-3">
               <Image
@@ -71,8 +71,8 @@ export default function HomeCard({
               </Link>
             </div>
           </div>
-        </Fade>
-      </div>
+       
+      </div> </Fade>
     </div>
   );
 }
