@@ -1,5 +1,5 @@
 import { BsFacebook } from "react-icons/bs";
-import smallerlogo from "../../public/images/smallerlogo.png";
+import smallerlogo from "../../public/images/logo3.png";
 import Image from "next/image";
 import { LiaHatCowboySideSolid } from "react-icons/lia";
 import { titleFont, textFont } from "@/app/utils/fonts";
@@ -10,7 +10,7 @@ import { FaLocationDot } from "react-icons/fa6";
 export default function Footer() {
   return (
     <footer className=" box-content flex bg-customBeige bg-opacity-10 border-t-2 border-customBrown border-opacity-10">
-      <div className="w-1/5  px-8 py-3">
+      <div className="w-1/6  pl-4 py-3">
         <Image src={smallerlogo} alt="logo" height={100} width={100} />
       </div>
 
