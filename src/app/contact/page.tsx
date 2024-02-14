@@ -1,7 +1,9 @@
+'use client'
+
 import Image from "next/image";
 
 import { textFont } from "../utils/fonts";
-
+import {Fade, Slide} from 'react-awesome-reveal'
 import Header from "@/components/GreenHeader";
 
 import lukethornton from "../../../public/images/lukethornton.jpg";
@@ -21,7 +23,8 @@ export default function ContactPage() {
           />
 
           {/* contact container */}
-          <div className="shadow-element-light z-20 mb-7 mt-[11rem] flex h-[85%] w-[90%] items-start justify-center rounded">
+          <Slide direction="right" className="w-full flex justify-center h-[90%] mb-[3rem] items-center">
+          <div className="shadow-element-light z-20  mt-[11rem] flex h-[85%] w-[90%] items-start justify-center rounded">
             {/* contact info */}
 
             <div className="flex h-[100%] w-1/4 flex-col justify-start bg-customBeige p-4 pt-8 ">
@@ -63,6 +66,7 @@ export default function ContactPage() {
             {/* contact form */}
             <ContactForm />
           </div>
+    </Slide>
         </div>
       </div>
     </div>
