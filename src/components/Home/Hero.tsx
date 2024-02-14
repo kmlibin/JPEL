@@ -20,6 +20,8 @@ export default function Hero() {
           fill
           style={{ objectFit: "cover" }}
           alt="highlands cow"
+          placeholder="blur"
+        
         />
         <div className="absolute inset-0 bg-slate-800 bg-opacity-30"></div>
       </div>
