@@ -9,7 +9,7 @@ import { FaLocationDot } from "react-icons/fa6";
 
 export default function Footer() {
   return (
-    <footer className=" box-content flex bg-customBeige bg-opacity-10 border-t-2 border-customBrown border-opacity-10">
+    <footer className=" box-content flex bg-customBeige bg-opacity-20 border-t-2 border-customBrown border-opacity-10">
       <div className="w-1/6  pl-4 py-3">
         <Image src={smallerlogo} alt="logo" height={100} width={100} />
       </div>
