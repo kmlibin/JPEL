@@ -2,10 +2,13 @@ import { NextApiRequest, NextApiResponse } from "next";
 import emailjs from "@emailjs/browser";
 import { NextRequest, NextResponse } from "next/server";
 
+
 export async function POST(req: NextRequest, res: NextResponse) {
   //grab info from body
   const body = await req.json();
   const { name, message, phone, email } = body;
+
+  console.log(name, message, phone, email)
 
   const service = process.env.SERVICE_KEY;
   const publickey = process.env.NEXT_PUBLIC_KEY;

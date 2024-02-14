@@ -1,15 +1,28 @@
 "use client";
 import { titleFont, textFont } from "../utils/fonts";
 import { sendEmail } from "../actions/sendEmail";
+import { POST } from "../api/send/route";
 import { useFormState } from "react-dom";
 import { useState, useEffect, useRef } from "react";
 import Modal from "./Modal";
 
+interface sendEmailFormState {
+  errors: {
+    message?: string[];
+    phone?: string[];
+    email?: string[];
+    name?: string[];
+    _form?: string[];
+  };
+  success?: boolean | null;
+}
+
 export default function ContactForm() {
-  const [formState, action] = useFormState(sendEmail, {
+  const [formState, setFormState] = useState<sendEmailFormState>({
     errors: {},
     success: null,
   });
+
   const ref = useRef<HTMLFormElement | null>(null);
   const [modal, setModal] = useState<boolean>(false);
   const [success, setSuccess] = useState(false);
@@ -28,14 +41,97 @@ export default function ContactForm() {
     }
   }, [formState]);
 
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const formData = new FormData(e.currentTarget as HTMLFormElement);
 
+    const name = formData.get("name");
+    const email = formData.get("email")?.toString();
+    const phone = formData.get("phone");
+    const message = formData.get("message");
+    console.log(name, email, phone, message);
+    if (!phone && !email) {
+      setFormState({
+        errors: {
+          phone: ["Please provide either an email or phone number"],
+          email: ["Please provide either an email or phone number"],
+        },
+        success: false,
+      });
+      return;
+    }
+
+    if (!name) {
+      setFormState({
+        errors: {
+          name: ["Please provide a name"],
+        },
+        success: false,
+      });
+      return;
+    }
+
+    //check for valid email
+    if (email) {
+      const emailPattern = /^\S+@\S+\.\S+$/;
+      const isValidEmail = emailPattern.test(email);
+      if (!isValidEmail) {
+        setFormState({
+          errors: {
+            email: ["Please provide a valid email"],
+          },
+          success: false,
+        });
+        return;
+      }
+    }
+
+    if (!message) {
+      setFormState({
+        errors: {
+          message: ["Please write a message"],
+        },
+        success: false,
+      });
+    }
+
+    try {
+      const res = await fetch("/api/send", {
+        method: "POST",
+        body: JSON.stringify(Object.fromEntries(formData)),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+
+      if (res.ok) {
+        setFormState({ errors: {}, success: true });
+      } else {
+        const data = await res.json();
+        setFormState({
+          errors: {
+            _form: [
+              "Failed to send email. Please try again later or call or email JPEL directly",
+            ],
+          },
+          success: false,
+        });
+      }
+    } catch (error) {
+      console.error("Error sending email:", error);
+      setFormState({
+        errors: { _form: ["Something went wrong..."] },
+        success: false,
+      });
+    }
+  };
 
   return (
     <>
       <div className=" flex h-[100%] flex-1 flex-col items-center justify-center bg-customDarkGreen">
         <form
+          onSubmit={handleSubmit}
           ref={ref}
-          action={action}
           className={`${textFont.className} flex h-full w-3/4 flex-col items-center justify-start`}
         >
           <h2
