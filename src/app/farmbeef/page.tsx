@@ -20,9 +20,10 @@ export default function FarmBeef() {
           <Image
             src={seregy2}
             alt="cow"
-            className="shadow-element mt-[-20px]"
+            className="shadow-element mt-[-20px] w-[100%]"
             priority
             placeholder="blur"
+            
           />
         </div>
 
