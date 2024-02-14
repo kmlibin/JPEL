@@ -13,6 +13,7 @@ export default function ContactForm() {
   const ref = useRef<HTMLFormElement | null>(null);
   const [modal, setModal] = useState<boolean>(false);
   const [success, setSuccess] = useState(false);
+  const [buttonStatus, setButtonStatus] = useState("Submit");
 
   //pop up for formState
   useEffect(() => {
@@ -26,6 +27,8 @@ export default function ContactForm() {
       setModal(true);
     }
   }, [formState]);
+
+
 
   return (
     <>
@@ -100,7 +103,7 @@ export default function ContactForm() {
               type="submit"
               className={`${titleFont.className} w-full rounded-full bg-customBeige py-3 tracking-wide duration-200 hover:scale-105 active:scale-95 active:bg-opacity-50`}
             >
-              Submit
+              {buttonStatus}
             </button>
           </div>
         </form>
