@@ -25,7 +25,7 @@ const FeedingCard = ({ my, text, image, icon }: FeedingCardProps) => {
           className={`shadow-element-light flex h-[450px] w-full items-stretch rounded border-2 border-customDarkGreen bg-customBrown bg-opacity-80 `}
         >
           <div className="min-h-full w-1/2 overflow-hidden ">
-            <Image alt="cow" src={image} className="min-h-full w-full" />
+            <Image alt="cow" src={image} className="min-h-full w-full" placeholder="blur" priority />
           </div>
 
           <div className=" relative flex w-1/2 items-stretch justify-start">

@@ -31,6 +31,7 @@ export default function AboutPage() {
                   className="shadow-element h-[400px] w-[400px] rounded"
                   src={Valdamaras}
                   alt="weight lifter"
+                  placeholder="blur"
                  priority
                 />
                 <p className="max-w-[400px] py-2 text-center text-xl italic text-customBeige opacity-70">
@@ -39,6 +40,7 @@ export default function AboutPage() {
                 <Image
                   className="shadow-element  h-[400px] w-[400px] rounded"
                   src={Valdamaras}
+                  placeholder="blur"
                   alt="weight lifter"
                 />
                 <p className="max-w-[400px] py-2 text-center text-xl italic text-customBeige opacity-70">

@@ -53,6 +53,7 @@ export default function HomeCard({
                 src={imgSrc}
                 height={350}
                 width={350}
+                placeholder="blur"
                 alt="our ranch"
                 className="shadow-element border-4 border-customMediumGreen"
               />

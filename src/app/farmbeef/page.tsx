@@ -22,6 +22,7 @@ export default function FarmBeef() {
             alt="cow"
             className="shadow-element mt-[-20px]"
             priority
+            placeholder="blur"
           />
         </div>
 
