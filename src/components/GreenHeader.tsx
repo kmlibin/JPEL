@@ -1,6 +1,6 @@
 "use client";
 import { titleFont, textFont } from "@/app/utils/fonts";
-import { JackInTheBox, Slide } from "react-awesome-reveal";
+import { Slide } from "react-awesome-reveal";
 
 interface HeaderProps {
   header: string;

@@ -1,10 +1,10 @@
 "use client";
 import Image from "next/image";
-import narrow from "../../../public/images/narrow1.jpg";
+
 import Valdamaras from "../../../public/images/ValdamarasD.jpg";
 import Header from "@/components/GreenHeader";
-import stories from "../../../public/images/stories.jpg";
-import { textFont, titleFont } from "../utils/fonts";
+
+import { textFont } from "../utils/fonts";
 import { Slide } from "react-awesome-reveal";
 import line from "../../../public/images/line.png";
 

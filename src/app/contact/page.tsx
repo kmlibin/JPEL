@@ -3,7 +3,7 @@
 import Image from "next/image";
 
 import { textFont } from "../utils/fonts";
-import {Fade, Slide} from 'react-awesome-reveal'
+import {Slide} from 'react-awesome-reveal'
 import Header from "@/components/GreenHeader";
 
 import lukethornton from "../../../public/images/lukethornton.jpg";

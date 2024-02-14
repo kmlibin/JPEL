@@ -2,13 +2,11 @@
 import { useState } from "react";
 import Link from "next/link";
 import paths from "@/app/paths";
-import { MdArrowLeft, MdArrowRight } from "react-icons/md";
+
 import { FaArrowAltCircleRight } from "react-icons/fa";
 
 import { textFont, titleFont } from "../../app/utils/fonts";
 
-import { FaCow } from "react-icons/fa6";
-import { LiaHatCowboySideSolid } from "react-icons/lia";
 import { IoIosArrowDropright, IoIosArrowDropleft } from "react-icons/io";
 
 const facts = [

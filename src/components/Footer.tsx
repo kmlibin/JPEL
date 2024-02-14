@@ -1,8 +1,8 @@
 import { BsFacebook } from "react-icons/bs";
 import smallerlogo from "../../public/images/logo3.png";
 import Image from "next/image";
-import { LiaHatCowboySideSolid } from "react-icons/lia";
-import { titleFont, textFont } from "@/app/utils/fonts";
+
+import { textFont } from "@/app/utils/fonts";
 import { HiOutlineMail } from "react-icons/hi";
 import { MdLocalPhone } from "react-icons/md";
 import { FaLocationDot } from "react-icons/fa6";

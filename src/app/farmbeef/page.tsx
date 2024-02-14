@@ -7,7 +7,7 @@ import line from "../../../public/images/line.png";
 import buybeefcontent from "../../content/BuyBeefContent/buybeefcontent";
 import BeefCard from "@/app/farmbeef/BeefCard";
 import Header from "@/components/GreenHeader";
-import usda from "../../../public/images/usda.png";
+
 import { Fade, JackInTheBox } from "react-awesome-reveal";
 import Menu from "./Menu";
 import FreeFrom from "@/components/FreeFrom/FreeFrom";

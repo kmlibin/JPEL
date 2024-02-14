@@ -3,7 +3,7 @@ import nocorn from "./nocorn.png";
 import nodrugs from "./nodrugs.png";
 import nopests from "./nopests.png";
 import nosoy from "./nosoy.png";
-import usda from "./usda.png";
+
 import coproud from "./coproud.png";
 import quality from "./quality.png";
 import {Fade} from "react-awesome-reveal";

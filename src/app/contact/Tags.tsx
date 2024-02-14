@@ -1,6 +1,6 @@
 import React from "react";
 import { titleFont } from "../utils/fonts";
-import { IconType } from "react-icons";
+
 
 interface TagsProps {
 

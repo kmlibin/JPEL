@@ -1,8 +1,6 @@
 import cottage from "../../public/images/cottage.jpg";
 import seregykotenev from "../../public/images/seregykotenev.jpg";
 import paths from "./paths";
-
-
 import Hero from "@/components/Home/Hero";
 import HomeCard from "@/components/Home/HomeCard";
 import homecontent from "@/content/HomeContent/homecontent.js";
