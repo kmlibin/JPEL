@@ -4,7 +4,7 @@ import seregy2 from "../../../public/images/seregy2.jpg";
 
 import line from "../../../public/images/line.png";
 
-import { buybeefcontent } from "../../content/BuyBeefContent/buybeefcontent";
+import buybeefcontent from "../../content/BuyBeefContent/buybeefcontent";
 import BeefCard from "@/app/farmbeef/BeefCard";
 import Header from "@/components/GreenHeader";
 import usda from "../../../public/images/usda.png";
@@ -44,6 +44,8 @@ export default function FarmBeef() {
           <div className="mx-2 mt-[10rem] flex w-[97%] flex-col items-center justify-center gap-4 pb-20">
             {/* <hr className="mb-10 w-[70%] border-b border-customMediumGreen opacity-40"></hr> */}
             <img src={line.src} alt="line" className="mb-10 w-1/3" />
+
+            {/* had to go back to NOT mapping for each component, glitch with second classname, would inconsistently pass the color */}
             <div className="flex w-full items-stretch justify-center gap-4">
               <Fade
                 className="flex w-full items-stretch justify-center gap-4"
@@ -53,15 +55,21 @@ export default function FarmBeef() {
                 direction="left"
                 triggerOnce
               >
-                {buybeefcontent.map((content) => (
-                  <BeefCard
-                    key={content.header}
-                    number={content.number}
-                    color={content.color}
-                    list={content.list}
-                    header={content.header}
-                  />
-                ))}
+                <BeefCard
+                  number="1"
+                  content={buybeefcontent.contentOne}
+                  color="bg-customBeige"
+                />
+                <BeefCard
+                  number="2"
+                  content={buybeefcontent.contentTwo}
+                  color="bg-customRedBrown"
+                />
+                <BeefCard
+                  number="3"
+                  content={buybeefcontent.contentThree}
+                  color="bg-customBrown"
+                />
               </Fade>
             </div>
             <img src={line.src} alt="line" className="mb-[-3rem] mt-10 w-1/3" />
@@ -81,6 +89,7 @@ export default function FarmBeef() {
       </div>
       <Fade
         duration={2000}
+        direction="up"
         triggerOnce
         className="flex w-full items-center justify-center"
       >

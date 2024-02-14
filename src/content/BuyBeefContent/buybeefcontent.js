@@ -1,14 +1,12 @@
-const buybeefcontent = [
-  {
-    number: "1",
-    color: "bg-customBeige",
+const buybeefcontent = {
+  contentOne: {
     header: "Natural Farming",
     list: [
       {
         title: "Organic and Pesticide Free:",
         content: `JPEL Farms follows organic practices, ensuring that their
-        Highland Cattle are raised without pesticides and harmful
-        chemicals.`,
+    Highland Cattle are raised without pesticides and harmful
+    chemicals.`,
       },
       {
         title: "Grass-Fed Lifestyle:",
@@ -20,9 +18,7 @@ const buybeefcontent = [
       },
     ],
   },
-  {
-    number: "2",
-    color: "bg-customRedBrown",
+  contentTwo: {
     header: "Unique Traits",
     list: [
       {
@@ -42,9 +38,8 @@ const buybeefcontent = [
       },
     ],
   },
-  {
-    number: "3",
-    color: "bg-customBrown",
+
+  contentThree: {
     header: "Health Benefits",
     list: [
       {
@@ -53,27 +48,27 @@ const buybeefcontent = [
       },
       {
         title: "Omega Fatty Acids:",
-        content: `It has higher levels of beneficial omega-3 fatty acids and lower levels of omega-6, contributing to heart health.`,
+        content: ` It has higher levels of beneficial omega-3 fatty acids and lower levels of omega-6, contributing to heart health.`,
       },
       {
-        title: "Vitamins and Minerals:",
+        title: "Vitamins and Minerals",
         content: `Packed with essential nutrients such as vitamins A, E, B12, niacin, vitamin B6, phosphorus, zinc, and selenium, providing various health benefits.`,
       },
     ],
   },
-];
 
-const cutsAndPrices = [
-  { cut: "Chuck Roast", price: "$8.99/lb" },
-  { cut: "Ribeye Steak", price: "$12.99/lb" },
-  { cut: "Sirloin Steak", price: "$10.99/lb" },
-  { cut: "Tenderloin", price: "$14.99/lb" },
-  { cut: "Brisket", price: "$9.99/lb" },
-  { cut: "Short Ribs", price: "$7.99/lb" },
-  { cut: "Flank Steak", price: "$11.99/lb" },
-  { cut: "Top Round Roast", price: "$9.49/lb" },
-  { cut: "Ground Beef", price: "$6.99/lb" },
-  { cut: "Stew Meat", price: "$7.49/lb" },
-];
+  cutsAndPrices: [
+    { cut: "Chuck Roast", price: "$8.99/lb" },
+    { cut: "Ribeye Steak", price: "$12.99/lb" },
+    { cut: "Sirloin Steak", price: "$10.99/lb" },
+    { cut: "Tenderloin", price: "$14.99/lb" },
+    { cut: "Brisket", price: "$9.99/lb" },
+    { cut: "Short Ribs", price: "$7.99/lb" },
+    { cut: "Flank Steak", price: "$11.99/lb" },
+    { cut: "Top Round Roast", price: "$9.49/lb" },
+    { cut: "Ground Beef", price: "$6.99/lb" },
+    { cut: "Stew Meat", price: "$7.49/lb" },
+  ],
+};
 
-export { buybeefcontent, cutsAndPrices };
+export default buybeefcontent;

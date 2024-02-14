@@ -2,7 +2,7 @@ import React from 'react'
 import Image from 'next/image'
 import supportlocal from '../../../public/images/supportlocal.png'
 import JPELlabel from '../../../public/images/JPELlabel.svg'
-import {cutsAndPrices} from '@/content/BuyBeefContent/buybeefcontent'
+import buybeefcontent from '@/content/BuyBeefContent/buybeefcontent'
 import { titleFont, textFont } from '../utils/fonts'
 
 const Menu = () => {
@@ -31,7 +31,7 @@ const Menu = () => {
               <ul
                 className={`${titleFont.className} shadow-element-light w-full rounded bg-customWhite bg-opacity-50 p-4 text-xl leading-normal tracking-wide`}
               >
-                {cutsAndPrices.map(({ cut, price }) => (
+           {buybeefcontent.cutsAndPrices.map(({ cut, price }) => (
                   <li key={cut}>
                     <strong>{cut}:</strong>&nbsp;{" "}
                     <span className={`${textFont.className}`}>{price}</span>
