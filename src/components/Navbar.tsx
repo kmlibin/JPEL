@@ -97,6 +97,7 @@ const Navbar = () => {
         </li>
 
         <div className="relative top-[130%] ">
+          <Link href={paths.homePath()}>
           <Image
             src={logo}
             height={200}
@@ -104,6 +105,7 @@ const Navbar = () => {
             alt="JPEL farms"
             className="z-20 rounded-full bg-customWhite "
           />
+          </Link>
         </div>
         <li
           onMouseEnter={handleMouseEnter}
