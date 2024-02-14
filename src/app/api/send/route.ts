@@ -8,12 +8,11 @@ export async function POST(req: NextRequest, res: NextResponse) {
   const body = await req.json();
   const { name, message, phone, email } = body;
 
-  console.log(name, message, phone, email)
-
   const service = process.env.SERVICE_KEY;
   const publickey = process.env.NEXT_PUBLIC_KEY;
   const privatekey = process.env.PRIVATE_KEY;
 
+  //object to send
   const emailData = {
     service_id: service,
     template_id: "template_jwbblc5",
@@ -27,6 +26,7 @@ export async function POST(req: NextRequest, res: NextResponse) {
     },
   };
 
+  //send request
   try {
     const res = await fetch("https://api.emailjs.com/api/v1.0/email/send/", {
       method: "POST",
@@ -36,19 +36,21 @@ export async function POST(req: NextRequest, res: NextResponse) {
       body: JSON.stringify(emailData),
     });
 
-    // console.log("Response status:", res.status);
-    // console.log("Response headers:", res.headers);
-    // console.log("Response body:", await res.text()); // Use .text() to read the response body as text
-
     if (!res.ok) {
       console.log("bad request");
-      return Response.json({ status: 400 });
+      return NextResponse.json(
+        { error: "Failed to send email" },
+        { status: 503 },
+      );
     }
 
-    return Response.json({ status: 200 });
+    return NextResponse.json({ status: 200 });
   } catch (error) {
     console.error("Error sending email:");
-    throw error;
+    return NextResponse.json(
+      { error: "Internal Service Error" },
+      { status: 500 },
+    );
   }
 }
 
