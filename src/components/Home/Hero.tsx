@@ -16,6 +16,7 @@ export default function Hero() {
       <div className="absolute inset-0">
         <Image
           src={ybagmedia}
+          priority
           fill
           style={{ objectFit: "cover" }}
           alt="highlands cow"

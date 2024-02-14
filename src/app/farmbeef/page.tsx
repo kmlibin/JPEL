@@ -21,6 +21,7 @@ export default function FarmBeef() {
             src={seregy2}
             alt="cow"
             className="shadow-element mt-[-20px]"
+            priority
           />
         </div>
 

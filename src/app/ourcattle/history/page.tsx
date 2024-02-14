@@ -16,6 +16,7 @@ export default function HistoryPage() {
             src={narrowone}
             alt="cow"
             className="shadow-element mt-[-90px] w-[100%]"
+            priority
           />
         </div>
         <div className="relative flex h-full w-full flex-col items-center justify-center">
