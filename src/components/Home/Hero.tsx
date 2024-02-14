@@ -1,14 +1,14 @@
-"use client";
 import Image from "next/image";
-import Link from "next/link";
-import { FaArrowAltCircleRight } from "react-icons/fa";
-import { titleFont, textFont } from "@/app/utils/fonts";
+import HeroText from "./HeroText";
+// import Link from "next/link";
+// import { FaArrowAltCircleRight } from "react-icons/fa";
+// import { titleFont, textFont } from "@/app/utils/fonts";
 import ybagmedia from "../../../public/images/ybagmedia.jpg";
-import paths from "@/app/paths";
-import {
-  Slide,
-  Zoom,
-} from "react-awesome-reveal";
+// import paths from "@/app/paths";
+// import {
+//   Slide,
+//   Zoom,
+// } from "react-awesome-reveal";
 
 export default function Hero() {
   return (
@@ -23,8 +23,8 @@ export default function Hero() {
         />
         <div className="absolute inset-0 bg-slate-800 bg-opacity-30"></div>
       </div>
-
-      <div className="absolute bottom-[18%] right-[5%] flex flex-col items-center text-center">
+      <HeroText />
+      {/* <div className="absolute bottom-[18%] right-[5%] flex flex-col items-center text-center">
         <Slide direction="right" duration={1500} triggerOnce>
           <h1 className={`${titleFont.className} text-6xl text-customWhite`}>
             Quality Mountain-Raised Beef
@@ -44,7 +44,7 @@ export default function Hero() {
           <FaArrowAltCircleRight className="ml-2" />
         </Link>
         </Zoom>
-      </div>
+      </div> */}
     </div>
   );
 }
