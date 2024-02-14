@@ -43,13 +43,15 @@ export default function ContactForm() {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    setButtonStatus("...Sending");
     const formData = new FormData(e.currentTarget as HTMLFormElement);
-
+    //grab fields
     const name = formData.get("name");
     const email = formData.get("email")?.toString();
     const phone = formData.get("phone");
     const message = formData.get("message");
-    console.log(name, email, phone, message);
+    //check the integrity of the fields
+    //must have either a phone or an email
     if (!phone && !email) {
       setFormState({
         errors: {
@@ -58,6 +60,7 @@ export default function ContactForm() {
         },
         success: false,
       });
+      setButtonStatus("Submit");
       return;
     }
 
@@ -68,6 +71,7 @@ export default function ContactForm() {
         },
         success: false,
       });
+      setButtonStatus("Submit");
       return;
     }
 
@@ -82,6 +86,7 @@ export default function ContactForm() {
           },
           success: false,
         });
+        setButtonStatus("Submit");
         return;
       }
     }
@@ -93,8 +98,11 @@ export default function ContactForm() {
         },
         success: false,
       });
+      setButtonStatus("Submit");
+      return;
     }
 
+    //send the request
     try {
       const res = await fetch("/api/send", {
         method: "POST",
@@ -106,6 +114,7 @@ export default function ContactForm() {
 
       if (res.ok) {
         setFormState({ errors: {}, success: true });
+        setButtonStatus("Submit");
       } else {
         const data = await res.json();
         setFormState({
@@ -116,6 +125,7 @@ export default function ContactForm() {
           },
           success: false,
         });
+        setButtonStatus("Submit");
       }
     } catch (error) {
       console.error("Error sending email:", error);
@@ -123,6 +133,7 @@ export default function ContactForm() {
         errors: { _form: ["Something went wrong..."] },
         success: false,
       });
+      setButtonStatus("Submit");
     }
   };
 
