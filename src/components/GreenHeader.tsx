@@ -24,7 +24,7 @@ export default function Header({
   direction,
 }: HeaderProps) {
   return (
-    <Slide className="z-25 absolute top-0 flex w-full flex-col">
+    <Slide className={`z-25 absolute top-0 flex w-full flex-col items-center `}>
     <div
       className={`${titleFont.className} shadow-element absolute ${left} ${ml} ${translatex} ${transform} ${top} top-[-1rem]  flex  flex-col items-center bg-customDarkGreen p-9 text-5xl text-customWhite`}
     >
