@@ -24,22 +24,17 @@ export default function Header({
   direction,
 }: HeaderProps) {
   return (
-    <Slide
-      direction={direction}
-      triggerOnce
-      className={`${titleFont.className}  absolute ${left} ${ml} ${translatex} ${transform} ${top} top-[-1rem]  flex  flex-col items-center`}
+    <Slide className="z-25 absolute top-0 flex w-full flex-col">
+    <div
+      className={`${titleFont.className} shadow-element absolute ${left} ${ml} ${translatex} ${transform} ${top} top-[-1rem]  flex  flex-col items-center bg-customDarkGreen p-9 text-5xl text-customWhite`}
     >
-      {" "}
-      <div
-        className={`${titleFont.className} shadow-element  ${left}  ${translatex} ${transform} ${top} top-[-1rem]  flex  flex-col items-center bg-customDarkGreen p-9 text-5xl text-customWhite`}
+      <h2 className="text-center">{header}</h2>
+      <h5
+        className={`${textFont.className} mt-2 w-[full] text-center text-lg tracking-wide text-customLightGreen opacity-90`}
       >
-        <h2 className="text-center">{header}</h2>
-        <h5
-          className={`${textFont.className} mt-2 w-[full] text-center text-lg tracking-wide text-customLightGreen opacity-90`}
-        >
-          {subheader}
-        </h5>
-      </div>
+        {subheader}
+      </h5>
+    </div>
     </Slide>
   );
 }
