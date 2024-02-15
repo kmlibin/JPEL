@@ -4,7 +4,7 @@ import Link from "next/link";
 import { FaArrowAltCircleRight } from "react-icons/fa";
 import { titleFont, textFont } from "@/app/utils/fonts";
 import Header from "../GreenHeader";
-import { Fade } from "react-awesome-reveal";
+import { Fade, Slide } from "react-awesome-reveal";
 
 interface HomeCardProps {
   imgSrc: any;
@@ -31,22 +31,22 @@ export default function HomeCard({
   transform,
 }: HomeCardProps) {
   return (
-    <div className="relative mx-auto flex w-full items-center justify-center bg-customBeige bg-opacity-10">
+    <div className="relative flex w-full items-center justify-center bg-customBeige bg-opacity-10">
       <div className=" absolute my-auto h-[83%] w-[97%] rounded  border-2 border-customMediumGreen opacity-40"></div>
-
-      <Header
-        header={header}
-        subheader={subheader}
-        ml={ml}
-        left={left}
-        top={top}
-        translatex={translatex}
-        transform={transform}
-        direction="left"
-      />
-    <Fade duration={1500} className="flex items-center justify-center">
-      <div className=" shadow-element-grey my-[10rem] flex h-[100%] w-[90%] items-center justify-center rounded border-2 border-customBrown border-opacity-5 bg-customBrown bg-opacity-30 p-2">
-    
+      
+        <Header
+          header={header}
+          subheader={subheader}
+          ml={ml}
+          left={left}
+          top={top}
+          translatex={translatex}
+          transform={transform}
+          direction="left"
+        />
+   
+      <Fade duration={1500} className="flex items-center justify-center">
+        <div className=" shadow-element-grey my-[10rem] flex h-[100%] w-[90%] items-center justify-center rounded border-2 border-customBrown border-opacity-5 bg-customBrown bg-opacity-30 p-2">
           <div className=" shadow-element flex h-[97%] w-[100%] items-center justify-between rounded  bg-customLightGreen bg-opacity-60 p-4">
             <div className="flex w-1/3 flex-col items-center justify-center  py-3">
               <Image
@@ -72,8 +72,8 @@ export default function HomeCard({
               </Link>
             </div>
           </div>
-       
-      </div> </Fade>
+        </div>{" "}
+      </Fade>
     </div>
   );
 }
