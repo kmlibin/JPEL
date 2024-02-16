@@ -42,7 +42,7 @@ const history = {
     sustainable agriculture and effective range management worldwide`,
   factOne: ` With archaeological evidence dating back to the 6th century and
     written records from the 12th century, the Highland Cow (affectionately known in Scotland
-    as the "Hairy Coo) has played a large role in Scottish history"`,
+    as the "Hairy Coo") has played a large role in Scottish history`,
   factTwo: `Highland beef is renowned for its lower fat and cholesterol
     content compared to other beef breeds, even surpassing chicken
     in certain aspects. The meat's fine texture, succulent flavor,

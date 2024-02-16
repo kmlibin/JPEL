@@ -4,7 +4,7 @@ const buybeefcontent = {
     list: [
       {
         title: "Organic and Pesticide Free:",
-        content: `JPEL Farms follows organic practices, ensuring that their
+        content: `JPEL Farms follows organic practices, ensuring their
     Highland Cattle are raised without pesticides and harmful
     chemicals.`,
       },
