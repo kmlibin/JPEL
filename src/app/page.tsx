@@ -3,12 +3,14 @@ import seregykotenev from "../../public/images/seregykotenev.jpg";
 import paths from "./paths";
 import Hero from "@/components/Home/Hero";
 import HomeCard from "@/components/Home/HomeCard";
-import homecontent from "@/content/HomeContent/homecontent.js";
+import { homecontent } from "@/content/HomeContent/homecontent.js";
 import FactsCard from "@/components/Home/FactsCard";
+
 
 export default function Home() {
   return (
-    <main className="flex flex-col bg-customWhite">
+   
+    <main className="flex flex-col bg-customWhite"> 
       {/* hero */}
       <Hero />
 

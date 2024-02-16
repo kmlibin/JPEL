@@ -31,4 +31,9 @@ const homecontent = {
   },
 };
 
-export default homecontent;
+const homeMetaContent = {
+  title: "JPEL Farms | USDA Certified Beef",
+  description: "Discover JPEL Farms, a family-run farm in Colorado, offering naturally organic and uniquely flavorful Highland Beef. Learn about our commitment to local and sustainable farming practices."
+}
+
+export {homecontent, homeMetaContent};
