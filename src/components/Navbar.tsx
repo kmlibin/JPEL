@@ -5,7 +5,7 @@ import Image from "next/image";
 import React, { useState, useEffect } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { IoIosArrowDown } from "react-icons/io";
-import logo from "../../public/images/newlogo2.png";
+import logo from "../../public/images/cleanhorns.png";
 import paths from "@/app/paths";
 import { textFont } from "../app/utils/fonts";
 
