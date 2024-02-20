@@ -5,7 +5,7 @@ import Image from "next/image";
 import React, { useState, useEffect } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { IoIosArrowDown } from "react-icons/io";
-import logo from "../../public/images/cleanhorns.png";
+import logo from "../../public/images/backfill.png";
 import paths from "@/app/paths";
 import { textFont } from "../app/utils/fonts";
 
@@ -96,14 +96,14 @@ const Navbar = () => {
           </Link>
         </li>
 
-        <div className="relative top-[130%] ">
+        <div className="relative top-[142%] ">
           <Link href={paths.homePath()}>
           <Image
             src={logo}
-            height={200}
-            width={200}
+            height={220}
+            width={220}
             alt="JPEL farms"
-            className="z-20 rounded-full bg-customWhite "
+            className="z-20 rounded-full"
           />
           </Link>
         </div>
