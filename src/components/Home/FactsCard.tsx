@@ -16,7 +16,7 @@ export default function FactsCard() {
           <h5
             className={`${textFont.className} mt-2 w-[full] text-center text-lg tracking-wide text-customLightGreen opacity-90`}
           >
-            Shaggy and Adorable
+            The Oldest Registered Breed
           </h5>
           
         </div></Slide>
