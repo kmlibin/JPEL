@@ -15,7 +15,7 @@ const HeroText = () => {
     </Slide>
     <Slide direction="left" duration = {1500} triggerOnce >
     <h3 className={`${titleFont.className} mb-7 text-4xl text-customWhite`}>
-      Naturally Organic, Uniquely Flavorful
+      Exceptional Taste and Quality
     </h3>
     </Slide>
     <Zoom duration={1500} triggerOnce >
