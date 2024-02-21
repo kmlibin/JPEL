@@ -12,6 +12,37 @@ import { Fade, JackInTheBox } from "react-awesome-reveal";
 import Menu from "./Menu";
 import FreeFrom from "@/components/FreeFrom/FreeFrom";
 
+//do this, switch from client to server
+// export const metadata: Metadata = {
+//   title: "JPEL Farms | About Us",
+//   description:
+//     "Discover JPEL Farms, a family-run farm in Colorado, offering naturally organic and uniquely flavorful Highland Beef. Learn about our commitment to local and sustainable farming practices.",
+//   openGraph: {
+//     type: "website",
+//     url: "https://...",
+//     title: "JPEL Farms | About Us",
+//     description: "enter description here",
+//     siteName: "JPEL Farms",
+//     images: [{ url: "/images/backfill.png", width: 500, height: 500 }],
+//   },
+//   robots: {
+//     index: true,
+//     follow: true,
+//     noarchive: true,
+//     nosnippet: true,
+//     noimageindex: true,
+//     nocache: true,
+//   },
+//   referrer: "origin-when-cross-origin",
+//   authors: {
+//     name: "Libin Web Development",
+//     url: "https://kelli-portfolio.netlify.app",
+//   },
+//   keywords:
+//     "JPEL Farms, Colorado Beef, Organic Beef, Grassfed, USDA Certified, Local Beef, Highland Cattle, Grass-fed beef, Local Beef, Family Farm, Front Range Beef, Colorado Springs",
+// };
+
+
 export default function FarmBeef() {
   return (
     <div className="justify-content relative flex h-full min-w-[100%] flex-col items-center bg-customBeige bg-opacity-20 pb-4">
