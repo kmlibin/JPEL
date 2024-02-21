@@ -1,5 +1,5 @@
 import { BsFacebook } from "react-icons/bs";
-import smallerlogo from "../../public/images/logo3.png";
+import newlogoclean from "../../public/images/newlogoclean.png";
 import Image from "next/image";
 
 import { textFont } from "@/app/utils/fonts";
@@ -11,7 +11,7 @@ export default function Footer() {
   return (
     <footer className=" box-content flex bg-customBeige bg-opacity-20 border-t-2 border-customBrown border-opacity-10">
       <div className="w-1/6  pl-4 py-3">
-        <Image src={smallerlogo} alt="logo" height={100} width={100} />
+        <Image src={newlogoclean} alt="logo" height={100} width={100} />
       </div>
 
       {/* text */}

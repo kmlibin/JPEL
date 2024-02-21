@@ -5,7 +5,7 @@ import Image from "next/image";
 import React, { useState, useEffect } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { IoIosArrowDown } from "react-icons/io";
-import logo from "../../public/images/backfill.png";
+import newlogo from "../../public/images/newlogobackfill.png";
 import paths from "@/app/paths";
 import { textFont } from "../app/utils/fonts";
 
@@ -99,7 +99,7 @@ const Navbar = () => {
         <div className="relative top-[142%] ">
           <Link href={paths.homePath()}>
           <Image
-            src={logo}
+            src={newlogo}
             height={220}
             width={220}
             alt="JPEL farms"
