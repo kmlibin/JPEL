@@ -1,4 +1,4 @@
-"use client";
+
 import Header from "@/components/GreenHeader";
 import { textFont } from "@/app/utils/fonts";
 import lukethornton from "../../../../public/images/lukethornton.jpg";
@@ -9,6 +9,33 @@ import FeedingCard from "./FeedingCard";
 import feedingplan from "../../../content/OurCattleContent/feedingplan";
 import valdamaras from "../../../../public/images/ValdamarasD.jpg";
 import FreeFrom from "../../../components/FreeFrom/FreeFrom";
+import { Metadata } from "next";
+
+//do this
+export const metadata: Metadata = {
+  title: "JPEL Farms | Feeding Plan",
+  description:
+    "Discover JPEL Farms, a family-run farm in Colorado, offering naturally organic and uniquely flavorful Highland Beef. Learn about our commitment to local and sustainable farming practices.",
+  openGraph: {
+    type: "website",
+    url: "https://...",
+    title: "JPEL Farms | About Us",
+    description: "enter description here",
+    siteName: "JPEL Farms",
+    images: [{ url: "/images/backfill.png", width: 500, height: 500 }],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    noarchive: true,
+    nosnippet: true,
+    noimageindex: true,
+    nocache: true,
+  },
+  referrer: "origin-when-cross-origin",
+  authors: {name: "Libin Web Development", url: "https://kelli-portfolio.netlify.app" },
+  keywords: "JPEL Farms, Colorado Beef, Organic Beef, Grassfed, USDA Certified, Local Beef, Highland Cattle, Grass-fed beef, Local Beef, Family Farm, Front Range Beef, Colorado Springs"
+};
 
 export default function FeedingPage() {
   return (
@@ -24,6 +51,7 @@ export default function FeedingPage() {
           <div
             className={`${textFont.className} shadow-element-light relative mb-[4rem] mt-[11rem] box-content flex h-full w-3/4 flex-col justify-evenly bg-customWhite bg-opacity-30 p-9  leading-normal tracking-wide`}
           >
+ 
             {/* did adjust the content so that i could map over the content and display feeding card, but it had a glitch rendering the conditional classes, the second one wouldn't show the formatting */}
             <FeedingCard
               image={lukethornton}
