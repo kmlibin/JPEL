@@ -1,3 +1,4 @@
+'use client'
 import React from "react";
 import { titleFont, textFont } from "@/app/utils/fonts";
 import Image from "next/image";
@@ -17,6 +18,7 @@ interface FeedingCardProps {
 }
 const FeedingCard = ({ my, text, image, icon }: FeedingCardProps) => {
   return (
+
     <Fade duration={1000} direction="up" triggerOnce>
       <div
         className={`${textFont.className} ${my} shadow-element-light relative box-content flex h-[450px] flex-col justify-evenly rounded bg-customMediumGreen bg-opacity-90 p-9 leading-normal tracking-wide`}
@@ -48,6 +50,7 @@ const FeedingCard = ({ my, text, image, icon }: FeedingCardProps) => {
         </div>
       </div>
     </Fade>
+  
   );
 };
 

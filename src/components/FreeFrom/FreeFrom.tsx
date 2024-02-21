@@ -1,3 +1,4 @@
+'use client'
 import React from "react";
 import nocorn from "./nocorn.png";
 import nodrugs from "./nodrugs.png";
